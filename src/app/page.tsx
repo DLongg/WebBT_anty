@@ -29,8 +29,8 @@ export default function Home() {
       <WhyChooseSection />
       <ProcessSection />
       <ProjectsSection />
-      <TestimonialSection />
       <NewsSection />
+      <TestimonialSection />
       <PartnerSection />
       <CTASection />
       <Footer />

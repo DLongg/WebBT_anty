@@ -45,7 +45,7 @@ export function NewsSection() {
         </div>
 
 
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -54,39 +54,35 @@ export function NewsSection() {
           {news.slice(0, 3).map((item) => (
             <motion.div key={item.id} variants={itemVariants} className="group h-full">
               <Link href={`/news/${item.slug}`} className="block h-full">
-                <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-gray-100">
-                  <div className="relative aspect-[16/10] overflow-hidden">
-                    <img 
-                      src={item.image} 
-                      alt={item.title} 
+                <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-row sm:flex-col h-full border border-gray-100">
+                  <div className="relative w-[120px] sm:w-full shrink-0 aspect-[3/4] sm:aspect-[16/10] overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute top-4 left-4 bg-brand-gold text-white text-xs font-bold px-3 py-1.5 rounded-sm uppercase tracking-wider">
+                    <div className="hidden sm:block absolute top-4 left-4 bg-brand-gold text-white text-xs font-bold px-3 py-1.5 rounded-sm uppercase tracking-wider">
                       {item.category}
                     </div>
                   </div>
-                  
-                  <div className="p-6 flex flex-col flex-grow">
-                    <div className="flex items-center gap-4 text-xs text-gray-500 mb-3">
-                      <div className="flex items-center gap-1.5">
-                        <Calendar size={14} className="text-brand-gold" />
-                        {item.date}
-                      </div>
-                      <div className="flex items-center gap-1.5">
-                        <Clock size={14} className="text-brand-gold" />
-                        {item.readTime}
+
+                  <div className="p-4 sm:p-6 flex flex-col flex-grow justify-center sm:justify-start">
+                    <div className="flex items-center gap-3 sm:gap-4 text-[10px] sm:text-xs text-gray-500 mb-1.5 sm:mb-3">
+                      <div className="flex items-center gap-1 sm:gap-1.5">
+                        <Calendar size={12} className="text-brand-gold sm:w-3.5 sm:h-3.5" />
+                        <span className="truncate">{item.date}</span>
                       </div>
                     </div>
-                    
-                    <h3 className="text-xl font-bold font-heading text-brand-dark mb-3 group-hover:text-brand-gold transition-colors line-clamp-2">
+
+                    <h3 className="text-sm sm:text-xl font-bold font-heading text-brand-dark mb-1 sm:mb-3 group-hover:text-brand-gold transition-colors line-clamp-3 sm:line-clamp-2">
                       {item.title}
                     </h3>
-                    
-                    <p className="text-gray-600 text-sm line-clamp-3 mb-6 flex-grow">
+
+                    <p className="hidden sm:block text-gray-600 text-sm line-clamp-3 mb-6 flex-grow">
                       {item.excerpt}
                     </p>
-                    
-                    <div className="flex items-center gap-2 text-brand-gold text-sm font-bold uppercase tracking-wider group-hover:translate-x-2 transition-transform duration-300 mt-auto">
+
+                    <div className="hidden sm:flex items-center gap-2 text-brand-gold text-sm font-bold uppercase tracking-wider group-hover:translate-x-2 transition-transform duration-300 mt-auto">
                       Đọc tiếp <ArrowRight size={16} />
                     </div>
                   </div>
@@ -97,8 +93,8 @@ export function NewsSection() {
         </motion.div>
 
         <div className="mt-10 text-center md:hidden">
-          <Link 
-            href="/news" 
+          <Link
+            href="/news"
             className="inline-flex items-center gap-2 text-brand-gold font-medium"
           >
             Xem tất cả bài viết

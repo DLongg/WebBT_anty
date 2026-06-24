@@ -81,6 +81,13 @@ export function TestimonialSection() {
       </motion.div>
       
       <style dangerouslySetInnerHTML={{__html: `
+        .testimonial-swiper {
+          padding-bottom: 60px !important;
+        }
+        .testimonial-swiper .swiper-pagination {
+          bottom: 10px !important;
+          top: auto !important;
+        }
         .testimonial-swiper .swiper-pagination-bullet {
           width: 10px;
           height: 10px;

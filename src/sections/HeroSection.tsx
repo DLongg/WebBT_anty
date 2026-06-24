@@ -35,7 +35,7 @@ export function HeroSection({ projects = [] }: HeroSectionProps) {
   };
 
   return (
-    <section className="relative min-h-screen w-full flex items-center overflow-clip">
+    <section className="relative h-[calc(100vh/0.9)] w-full flex items-center overflow-clip">
       {/* Background Video/Image */}
       <div className="absolute inset-0 z-0 overflow-hidden bg-brand-dark">
         <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/95 via-brand-dark/70 to-brand-dark/30 z-10" />

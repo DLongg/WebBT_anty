@@ -71,7 +71,7 @@ export function WhyChooseSection() {
               <div className="col-span-7 space-y-4 pt-8">
                 <div className="rounded-2xl overflow-hidden shadow-xl">
                   <img
-                    src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80"
+                    src="/images/home/2aoboqb9tqvgsbogwijlnnvtyztdexllqxvgnm522.jpg"
                     alt="Thi công hệ thống điện"
                     className="w-full aspect-[3/4] object-cover hover:scale-105 transition-transform duration-700"
                   />
@@ -81,7 +81,7 @@ export function WhyChooseSection() {
               <div className="col-span-5 space-y-4">
                 <div className="rounded-2xl overflow-hidden shadow-xl">
                   <img
-                    src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80"
+                    src="/images/home/2aoboqb9u0molhs0nv0f8qk1muzmfmo0j0jyfos49.jpg"
                     alt="Trạm biến áp"
                     className="w-full aspect-square object-cover hover:scale-105 transition-transform duration-700"
                   />
