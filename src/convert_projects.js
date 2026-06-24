@@ -1,0 +1,191 @@
+const fs = require('fs');
+const path = require('path');
+
+const projects = [
+  {
+    "id": "1",
+    "slug": "chieu-sang-nut-giao-kim-ma",
+    "name": "Chiếu sáng nút giao Kim Mã - Nguyễn Chí Thanh",
+    "location": "Nút giao Daewoo, Hà Nội",
+    "category": "lighting",
+    "categoryLabel": "Chiếu sáng",
+    "shortDescription": "Chiếu sáng kiến trúc cầu vượt giao thông trọng điểm",
+    "image": "https://images.unsplash.com/photo-1514924013411-cbf25faa35bb?w=800&q=80",
+    "gallery": ["https://images.unsplash.com/photo-1514924013411-cbf25faa35bb?w=1200&q=80"],
+    "client": "Newtatco",
+    "area": "Nút giao thông",
+    "year": "Đã hoàn thành",
+    "investment": "Hàng tỷ VNĐ",
+    "description": "Hệ thống chiếu sáng kiến trúc nút giao thông trọng điểm, đảm bảo kỹ mỹ thuật và an toàn giao thông đô thị."
+  },
+  {
+    "id": "2",
+    "slug": "chieu-sang-cau-vuot-chua-boc-thai-ha",
+    "name": "Chiếu sáng cầu vượt Chùa Bộc - Thái Hà",
+    "location": "Hà Nội",
+    "category": "lighting",
+    "categoryLabel": "Chiếu sáng",
+    "shortDescription": "Hệ thống chiếu sáng kiến trúc cầu vượt đô thị",
+    "image": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80",
+    "gallery": ["https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&q=80"],
+    "client": "Newtatco",
+    "area": "Hạ tầng cầu vượt",
+    "year": "Đã hoàn thành",
+    "investment": "Hàng tỷ VNĐ",
+    "description": "Thi công lắp đặt hệ thống chiếu sáng kiến trúc cho cầu vượt Chùa Bộc - Thái Hà bằng công nghệ đèn LED tiên tiến."
+  },
+  {
+    "id": "3",
+    "slug": "chieu-sang-cau-vuot-lang-ha",
+    "name": "Chiếu sáng cầu vượt Láng Hạ - Thái Hà",
+    "location": "Hà Nội",
+    "category": "lighting",
+    "categoryLabel": "Chiếu sáng",
+    "shortDescription": "Chiếu sáng hạ tầng nút giao thông",
+    "image": "https://images.unsplash.com/photo-1494522855154-9297ac14b55f?w=800&q=80",
+    "gallery": ["https://images.unsplash.com/photo-1494522855154-9297ac14b55f?w=1200&q=80"],
+    "client": "Newtatco",
+    "area": "Hạ tầng giao thông",
+    "year": "Đã hoàn thành",
+    "investment": "Hàng tỷ VNĐ",
+    "description": "Thi công hệ thống chiếu sáng trang trí kiến trúc cầu vượt Láng Hạ - Thái Hà, yêu cầu cao về biện pháp tổ chức thi công ban đêm."
+  },
+  {
+    "id": "4",
+    "slug": "cap-ngam-nha-may-nuoc-yen-vien",
+    "name": "Trạm biến áp & Cáp ngầm Nhà máy nước sạch Yên Viên",
+    "location": "Gia Lâm, Hà Nội",
+    "category": "substation",
+    "categoryLabel": "Trạm biến áp",
+    "shortDescription": "Cáp ngầm trung thế 35KV và trạm biến áp",
+    "image": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80",
+    "gallery": ["https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1200&q=80"],
+    "client": "Công ty Nước sạch Hà Nội",
+    "area": "Nhà máy nước",
+    "year": "Đã hoàn thành",
+    "investment": "Quy mô lớn",
+    "description": "Thi công tuyến cáp ngầm trung thế 35KV và các trạm biến áp (Yên Viên 1, Yên Viên 4) phục vụ cấp nước sạch khu vực Bắc Đuống."
+  },
+  {
+    "id": "5",
+    "slug": "ha-tang-dien-kdt-thanh-pho-giao-luu",
+    "name": "Hạ tầng điện KĐT Thành phố Giao lưu",
+    "location": "Hà Nội",
+    "category": "electrical",
+    "categoryLabel": "Hệ thống điện",
+    "shortDescription": "Thi công tuyến cáp ngầm trung thế 24KV",
+    "image": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
+    "gallery": ["https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80"],
+    "client": "Chủ đầu tư KĐT",
+    "area": "Khu đô thị",
+    "year": "Đã hoàn thành",
+    "investment": "Hàng tỷ VNĐ",
+    "description": "Thi công tuyến cáp ngầm trung thế 24KV kéo từ trạm biến áp 110KV E1.9 Nghĩa Đô về cấp điện cho dự án."
+  },
+  {
+    "id": "6",
+    "slug": "nha-o-xh-bo-tai-chinh",
+    "name": "Nhà ở xã hội cho cán bộ Bộ Tài chính (CT15-CT16)",
+    "location": "Hà Nội",
+    "category": "me",
+    "categoryLabel": "Cơ điện M&E",
+    "shortDescription": "Thi công hệ thống M&E toàn bộ tòa nhà",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+    "gallery": ["https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80"],
+    "client": "Bộ Tài chính",
+    "area": "Chung cư cao tầng",
+    "year": "Đã hoàn thành",
+    "investment": "> 12,5 Tỷ VNĐ",
+    "description": "Thi công toàn bộ hệ thống điện trong nhà thuộc gói thầu M&E. Đảm bảo chất lượng, tiến độ và tiêu chuẩn khắt khe cho khu nhà ở Bộ ngành."
+  },
+  {
+    "id": "7",
+    "slug": "nha-cong-vu-tong-cuc-ii",
+    "name": "Nhà công vụ Tổng cục II (GĐ 2)",
+    "location": "Liên Mạc, Hà Nội",
+    "category": "me",
+    "categoryLabel": "Cơ điện M&E",
+    "shortDescription": "Thi công M&E và cấp thoát nước",
+    "image": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80",
+    "gallery": ["https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&q=80"],
+    "client": "Tổng cục II - Bộ Quốc phòng",
+    "area": "Tòa nhà 18 tầng",
+    "year": "Đã hoàn thành",
+    "investment": "> 5,6 Tỷ VNĐ",
+    "description": "Đảm nhiệm toàn bộ việc thi công hệ thống điện nhà công vụ 18 tầng và hệ thống cấp thoát nước toàn khu theo tiêu chuẩn quân đội."
+  },
+  {
+    "id": "8",
+    "slug": "cai-tao-doanh-trai-bach-mai",
+    "name": "Cải tạo doanh trại khu vực Bạch Mai",
+    "location": "Bạch Mai, Hà Nội",
+    "category": "me",
+    "categoryLabel": "Xây dựng hạ tầng",
+    "shortDescription": "Nâng cấp, cải tạo toàn diện doanh trại",
+    "image": "https://images.unsplash.com/photo-1541888081622-1ce4471fbdab?w=800&q=80",
+    "gallery": ["https://images.unsplash.com/photo-1541888081622-1ce4471fbdab?w=1200&q=80"],
+    "client": "HVKHQS / Tổng cục II",
+    "area": "Doanh trại quân đội",
+    "year": "Đã hoàn thành",
+    "investment": "> 5,3 Tỷ VNĐ",
+    "description": "Dự án nâng cấp, cải tạo toàn diện doanh trại HVKHQS/TCII, bao gồm hệ thống điện nước và hạ tầng liên quan."
+  },
+  {
+    "id": "9",
+    "slug": "nha-o-thuong-mai-ct12-hoa-lac",
+    "name": "Khu nhà ở thương mại (GĐ 1) - Nhà CT12",
+    "location": "Khu CNC Hòa Lạc",
+    "category": "me",
+    "categoryLabel": "Cơ điện M&E",
+    "shortDescription": "Thi công lắp đặt hệ thống M&E",
+    "image": "https://images.unsplash.com/photo-1556156653-e5a7c69cc263?w=800&q=80",
+    "gallery": ["https://images.unsplash.com/photo-1556156653-e5a7c69cc263?w=1200&q=80"],
+    "client": "BQL Khu CNC Hòa Lạc",
+    "area": "Nhà ở thương mại",
+    "year": "Đã hoàn thành",
+    "investment": "> 4,3 Tỷ VNĐ",
+    "description": "Cung cấp vật tư và thi công lắp đặt hệ thống M&E toàn bộ tòa nhà, khẳng định uy tín với đối tác tại Khu công nghệ cao."
+  },
+  {
+    "id": "10",
+    "slug": "ha-tang-khu-phan-mem-hoa-lac",
+    "name": "Hạ tầng kỹ thuật Khu phần mềm (CNC Hòa Lạc)",
+    "location": "Khu CNC Hòa Lạc",
+    "category": "electrical",
+    "categoryLabel": "Hệ thống điện",
+    "shortDescription": "Cấp nguồn trung thế & chiếu sáng hạ tầng",
+    "image": "https://images.unsplash.com/photo-1413830743152-7d31191316b8?w=800&q=80",
+    "gallery": ["https://images.unsplash.com/photo-1413830743152-7d31191316b8?w=1200&q=80"],
+    "client": "BQL Khu CNC Hòa Lạc",
+    "area": "Khu phần mềm",
+    "year": "Đã hoàn thành",
+    "investment": "Hàng tỷ VNĐ",
+    "description": "Đảm nhận nhiều giai đoạn thi công hệ thống cấp nguồn trung thế và chiếu sáng hạ tầng kỹ thuật trọng điểm cho Khu phần mềm."
+  }
+];
+
+const dest = path.join(__dirname, 'content', 'projects');
+
+projects.forEach(p => {
+  const content = [
+    '---',
+    'id: "' + p.id + '"',
+    'name: "' + p.name + '"',
+    'location: "' + p.location + '"',
+    'category: "' + p.category + '"',
+    'categoryLabel: "' + p.categoryLabel + '"',
+    'shortDescription: "' + p.shortDescription + '"',
+    'image: "' + p.image + '"',
+    'gallery: ' + JSON.stringify(p.gallery),
+    'client: "' + p.client + '"',
+    'area: "' + p.area + '"',
+    'year: "' + p.year + '"',
+    'investment: "' + p.investment + '"',
+    '---',
+    '',
+    p.description
+  ].join('\\n');
+
+  fs.writeFileSync(path.join(dest, p.slug + '.md'), content);
+});
+console.log('Generated markdown files successfully');
