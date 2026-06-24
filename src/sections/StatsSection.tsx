@@ -8,12 +8,12 @@ function StatItem({ value, suffix, label, subtext, duration = 2500 }: { value: n
   const { ref, count } = useCountUp(value, duration);
 
   return (
-    <div ref={ref} className="text-center md:text-left p-8 md:p-10 relative group">
-      <div className="font-heading font-extrabold text-5xl md:text-6xl lg:text-7xl text-brand-gold mb-3 leading-none">
+    <div ref={ref} className="text-center md:text-left p-5 sm:p-8 md:p-10 relative group">
+      <div className="font-heading font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-brand-gold mb-2 sm:mb-3 leading-none">
         {count}
         <span className="text-brand-gold/60">{suffix}</span>
       </div>
-      <div className="text-white text-lg font-bold mb-2 font-heading">{label}</div>
+      <div className="text-white text-base sm:text-lg font-bold mb-1 sm:mb-2 font-heading">{label}</div>
       {subtext && <p className="text-white/50 text-sm leading-relaxed">{subtext}</p>}
     </div>
   );
@@ -23,7 +23,7 @@ export function StatsSection() {
   const { ref, isInView } = useScrollAnimation();
 
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden" ref={ref}>
+    <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden" ref={ref}>
       {/* Background */}
       <div className="absolute inset-0 bg-brand-dark" />
       <div
@@ -46,15 +46,15 @@ export function StatsSection() {
       >
         <div className="text-center mb-16">
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-white mb-3 sm:mb-4">
             Con Số Ấn Tượng
           </h2>
-          <p className="text-white/50 text-lg max-w-2xl mx-auto">
+          <p className="text-white/50 text-sm sm:text-lg max-w-2xl mx-auto">
             Những con số minh chứng cho sự phát triển và năng lực vượt trội của BT DECOM
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto divide-y md:divide-y-0 md:divide-x divide-white/10">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto divide-y md:divide-y-0 md:divide-x divide-white/10">
           <StatItem
             value={13}
             suffix="+"

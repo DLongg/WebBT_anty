@@ -17,26 +17,26 @@ export function ProcessSection() {
   const { ref, isInView } = useScrollAnimation();
 
   return (
-    <section className="py-24 md:py-32 bg-white" ref={ref}>
+    <section className="py-16 md:py-24 lg:py-32 bg-white" ref={ref}>
       <div className="container mx-auto px-4 md:px-6">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16 md:mb-20"
+          className="text-center mb-10 sm:mb-16 md:mb-20"
         >
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-brand-dark mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-brand-dark mb-3 sm:mb-4">
             Quy Trình Làm Việc
           </h2>
-          <p className="text-gray-500 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-500 text-sm sm:text-lg max-w-2xl mx-auto">
             Chúng tôi áp dụng quy trình chuyên nghiệp, minh bạch 6 bước để đảm bảo mọi dự án đạt kết quả tốt nhất.
           </p>
         </motion.div>
 
         {/* Steps Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 sm:gap-x-8 gap-y-6 sm:gap-y-10 max-w-5xl mx-auto">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (

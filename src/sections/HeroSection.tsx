@@ -14,7 +14,7 @@ interface HeroSectionProps {
 export function HeroSection({ projects = [] }: HeroSectionProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const duration = 7000;
-  
+
   // Provide exactly 5 slides for the slider
   const slides = projects.slice(0, 5);
 
@@ -35,7 +35,7 @@ export function HeroSection({ projects = [] }: HeroSectionProps) {
   };
 
   return (
-    <section className="relative min-h-screen w-full flex items-center overflow-hidden">
+    <section className="relative min-h-screen w-full flex items-center overflow-clip">
       {/* Background Video/Image */}
       <div className="absolute inset-0 z-0 overflow-hidden bg-brand-dark">
         <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/95 via-brand-dark/70 to-brand-dark/30 z-10" />
@@ -51,7 +51,7 @@ export function HeroSection({ projects = [] }: HeroSectionProps) {
       </div>
 
       {/* Content */}
-      <div className="container relative z-20 mx-auto px-4 md:px-6 pt-32 pb-20">
+      <div className="container relative z-20 mx-auto px-4 md:px-6 pt-24 sm:pt-32 pb-12 sm:pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left - Main Content */}
           <div className="lg:col-span-7 text-center lg:text-left">
@@ -60,7 +60,7 @@ export function HeroSection({ projects = [] }: HeroSectionProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[80px] text-white font-bold leading-[1.1] mb-6 md:mb-8">
+              <h1 className="font-heading text-[28px] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[80px] text-white font-bold leading-[1.1] mb-4 md:mb-8">
                 Chúng tôi sống <br />
                 vì thử thách
               </h1>
@@ -70,9 +70,9 @@ export function HeroSection({ projects = [] }: HeroSectionProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="text-base sm:text-lg md:text-xl text-white/80 mb-8 md:mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+              className="text-sm sm:text-base md:text-xl text-white/80 mb-6 md:mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
             >
-              Tại BT DECOM, chúng tôi hợp tác với khách hàng để hiện thực hóa tham vọng của họ, thực hiện các dự án tạo ra sự khác biệt lâu dài và có ý nghĩa đối với con người và cộng đồng trên toàn thế giới.
+              Tại BT DECOM, chúng tôi hợp tác với khách hàng để hiện thực hóa tham vọng của họ, thực hiện các dự án tạo ra sự khác biệt lâu dài và có ý nghĩa đối với con người và cộng đồng.
             </motion.p>
 
             {/* CTA Button - visible on mobile only */}
@@ -84,7 +84,7 @@ export function HeroSection({ projects = [] }: HeroSectionProps) {
             >
               <Link
                 href="/projects"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#4ade80] text-[#0a2610] font-semibold rounded-full hover:bg-[#22c55e] transition-all duration-300"
+                className="inline-flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-4 bg-[#4ade80] text-[#0a2610] font-semibold rounded-full hover:bg-[#22c55e] transition-all duration-300 text-sm sm:text-base"
               >
                 Xem dự án
                 <ArrowRight size={20} />
@@ -93,7 +93,7 @@ export function HeroSection({ projects = [] }: HeroSectionProps) {
           </div>
 
           {/* Right - Hero Slider Widget */}
-          <div className="lg:col-span-5 relative z-30 hidden lg:flex justify-end">
+          <div className="lg:col-span-5 relative z-30 hidden lg:flex justify-end overflow-visible">
             {slides.length > 0 ? (
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
@@ -147,7 +147,7 @@ export function HeroSection({ projects = [] }: HeroSectionProps) {
                             alt={slides[currentSlide].name}
                           />
                         </figure>
-                        
+
                         <div className="relative flex-1 flex flex-col">
                           <h3 className="text-white font-medium text-xl md:text-[22px] leading-snug line-clamp-3">
                             {slides[currentSlide].name}

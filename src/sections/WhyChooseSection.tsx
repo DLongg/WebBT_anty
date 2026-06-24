@@ -17,9 +17,9 @@ export function WhyChooseSection() {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-gray-50 overflow-hidden" ref={ref}>
+    <section className="py-16 md:py-24 lg:py-32 bg-gray-50 overflow-hidden" ref={ref}>
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-24 items-center">
 
           {/* Content Side */}
           <motion.div
@@ -29,12 +29,12 @@ export function WhyChooseSection() {
           >
 
 
-            <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold font-heading text-brand-dark mb-6 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold font-heading text-brand-dark mb-4 sm:mb-6 leading-tight">
               Sự khác biệt mang tên{" "}
               <span className="text-brand-gold">BT DECOM</span>
             </h2>
 
-            <p className="text-gray-500 text-lg mb-10 leading-relaxed">
+            <p className="text-gray-500 text-sm sm:text-lg mb-6 sm:mb-10 leading-relaxed">
               Không chỉ là một nhà thầu xây lắp điện, BT DECOM định vị mình là đối tác chiến lược, mang đến những giá trị thực vượt trên sự mong đợi.
             </p>
 
@@ -45,7 +45,7 @@ export function WhyChooseSection() {
                   initial={{ opacity: 0, y: 15 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
                   transition={{ duration: 0.4, delay: 0.2 + index * 0.08 }}
-                  className="flex items-start gap-3 bg-white p-5 rounded-xl border border-gray-100 hover:border-brand-gold/20 hover:shadow-lg hover:shadow-brand-gold/5 transition-all duration-300"
+                  className="flex items-start gap-3 bg-white p-4 sm:p-5 rounded-xl border border-gray-100 hover:border-brand-gold/20 hover:shadow-lg hover:shadow-brand-gold/5 transition-all duration-300"
                 >
                   <div className="w-8 h-8 rounded-lg bg-brand-gold/10 flex items-center justify-center shrink-0 mt-0.5">
                     <CheckCircle2 className="text-brand-gold" size={16} />

@@ -21,15 +21,15 @@ export function ProjectsSectionClient({ projects, projectCategories }: ProjectsS
     : projects.filter(p => p.category === activeCategory).slice(0, 6);
 
   return (
-    <section className="py-24 md:py-32 bg-brand-light" ref={ref}>
+    <section className="py-16 md:py-24 lg:py-32 bg-brand-light" ref={ref}>
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-14 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-14 gap-4 md:gap-6">
           <div>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-brand-dark mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-brand-dark mb-3 sm:mb-4">
               Dự Án Tiêu Biểu
             </h2>
-            <p className="text-gray-500 text-lg max-w-xl">
+            <p className="text-gray-500 text-sm sm:text-lg max-w-xl">
               Những dự án xuất sắc minh chứng cho năng lực và sự chuyên nghiệp của BT DECOM.
             </p>
           </div>
@@ -44,12 +44,12 @@ export function ProjectsSectionClient({ projects, projectCategories }: ProjectsS
 
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap gap-2 md:gap-4 mb-10">
+        <div className="flex flex-wrap gap-2 md:gap-4 mb-6 sm:mb-10">
           {projectCategories.map((category) => (
             <button
               key={category.value}
               onClick={() => setActiveCategory(category.value)}
-              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 ${
                 activeCategory === category.value
                   ? "bg-brand-gold text-white shadow-md"
                   : "bg-white text-gray-600 hover:bg-gray-50 border border-gray-200"
@@ -63,7 +63,7 @@ export function ProjectsSectionClient({ projects, projectCategories }: ProjectsS
         {/* Projects Grid */}
         <motion.div 
           layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8"
         >
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project) => (

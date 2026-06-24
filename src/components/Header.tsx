@@ -52,21 +52,21 @@ export function Header() {
           headerBg
         )}
       >
-        <div className="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
+        <div className="container mx-auto px-4 md:px-6 h-16 sm:h-20 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <img
               src="/images/bt-logo.png"
               alt="BT DECOM Logo"
-              className="h-14 w-auto"
+              className="h-10 sm:h-14 w-auto"
             />
             <div className="flex flex-col">
-              <span className={cn("font-heading font-extrabold text-xl tracking-wider leading-none",
+              <span className={cn("font-heading font-extrabold text-sm sm:text-xl tracking-wider leading-none",
                 isWhiteHeader ? "text-brand-gold" : "text-white"
               )}>
                 BT DECOM., LTD
               </span>
-              <span className={cn("text-[9px] tracking-widest uppercase mt-1",
+              <span className={cn("text-[8px] sm:text-[9px] tracking-widest uppercase mt-0.5 sm:mt-1 hidden sm:block",
                 isWhiteHeader ? "text-brand-dark/60" : "text-white/70"
               )}>
                 Chất lượng · Tiến độ · Hiệu quả
@@ -120,7 +120,7 @@ export function Header() {
         {/* Mobile Nav Drawer */}
         <div
           className={cn(
-            "fixed inset-0 top-20 bg-white z-40 transition-transform duration-300 ease-in-out lg:hidden flex flex-col",
+            "fixed inset-0 top-16 sm:top-20 bg-white z-40 transition-transform duration-300 ease-in-out lg:hidden flex flex-col",
             isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           )}
         >

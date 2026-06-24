@@ -9,7 +9,7 @@ export function CTASection() {
   const { ref, isInView } = useScrollAnimation();
 
   return (
-    <section className="py-16 md:py-20 relative overflow-hidden bg-brand-dark" ref={ref}>
+    <section className="py-12 sm:py-16 md:py-20 relative overflow-hidden bg-brand-dark" ref={ref}>
       {/* Background image with overlay */}
       <div
         className="absolute inset-0 opacity-20"
@@ -33,14 +33,14 @@ export function CTASection() {
         <div className="max-w-3xl mx-auto text-center">
 
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-white mb-10 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-white mb-6 sm:mb-10 leading-tight">
             Bạn cần đơn vị thi công<br className="hidden md:block" /> xây lắp chuyên nghiệp?
           </h2>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-3 bg-brand-gold hover:bg-brand-gold-light text-white px-10 py-5 rounded-xl font-semibold text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-gold/30"
+              className="group inline-flex items-center gap-2 sm:gap-3 bg-brand-gold hover:bg-brand-gold-light text-white px-6 py-3.5 sm:px-10 sm:py-5 rounded-xl font-semibold text-sm sm:text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-gold/30"
             >
               Liên hệ tư vấn miễn phí
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />

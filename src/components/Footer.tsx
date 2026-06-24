@@ -11,17 +11,17 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-brand-dark text-white pt-16 pb-6" ref={ref}>
+    <footer className="bg-brand-dark text-white pt-12 sm:pt-16 pb-6" ref={ref}>
       <motion.div 
         className="container mx-auto px-4 md:px-6"
         initial={{ opacity: 0, y: 50 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-10 sm:mb-12">
           
           {/* Column 1: Intro */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             <Link href="/" className="inline-block flex items-center gap-3">
               <img 
                 src="/images/bt-logo.png" 
@@ -107,7 +107,7 @@ export function Footer() {
           </div>
 
           {/* Column 4: Form & Map */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             <h4 className="text-lg font-bold mb-6 text-white font-heading">Nhận tư vấn nhanh</h4>
             <form className="flex flex-col gap-3">
               <input 

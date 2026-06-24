@@ -39,7 +39,7 @@ export function CoreValuesSection() {
   const { ref, isInView } = useScrollAnimation();
 
   return (
-    <section className="py-24 md:py-32 bg-brand-dark relative overflow-hidden" ref={ref}>
+    <section className="py-16 md:py-24 lg:py-32 bg-brand-dark relative overflow-hidden" ref={ref}>
       {/* Background pattern */}
       <div
         className="absolute inset-0 opacity-5"
@@ -56,18 +56,18 @@ export function CoreValuesSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16 md:mb-20"
+          className="text-center mb-10 sm:mb-16 md:mb-20"
         >
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-white mb-3 sm:mb-4">
             Giá Trị Cốt Lõi
           </h2>
-          <p className="text-white/50 text-lg max-w-2xl mx-auto">
+          <p className="text-white/50 text-sm sm:text-lg max-w-2xl mx-auto">
             Nền tảng vững chắc để xây dựng mọi công trình đạt chuẩn
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {values.map((value, index) => {
             const Icon = value.icon;
             return (
@@ -78,16 +78,16 @@ export function CoreValuesSection() {
                 transition={{ duration: 0.6, delay: index * 0.15 }}
                 className="group relative"
               >
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl h-full hover:bg-white/10 hover:border-brand-gold/30 transition-all duration-500 hover:-translate-y-2">
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-5 sm:p-8 rounded-xl sm:rounded-2xl h-full hover:bg-white/10 hover:border-brand-gold/30 transition-all duration-500 hover:-translate-y-2">
                   {/* Icon */}
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${value.accent} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <Icon size={30} strokeWidth={1.5} className="text-white" />
+                  <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-gradient-to-br ${value.accent} flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <Icon size={24} strokeWidth={1.5} className="text-white" />
                   </div>
 
-                  <h3 className="text-xl font-bold font-heading text-white mb-3">
+                  <h3 className="text-base sm:text-xl font-bold font-heading text-white mb-2 sm:mb-3">
                     {value.title}
                   </h3>
-                  <p className="text-white/60 leading-relaxed">
+                  <p className="text-white/60 leading-relaxed text-xs sm:text-base">
                     {value.description}
                   </p>
 

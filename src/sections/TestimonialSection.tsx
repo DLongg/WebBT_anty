@@ -14,7 +14,7 @@ export function TestimonialSection() {
   const { ref, isInView } = useScrollAnimation();
 
   return (
-    <section className="py-24 md:py-32 bg-white" ref={ref}>
+    <section className="py-16 md:py-24 lg:py-32 bg-white" ref={ref}>
       <motion.div 
         className="container mx-auto px-4 md:px-6"
         initial={{ opacity: 0, y: 30 }}
@@ -23,10 +23,10 @@ export function TestimonialSection() {
       >
         <div className="text-center mb-14">
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-brand-dark mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-brand-dark mb-3 sm:mb-4">
             Khách Hàng Nói Gì
           </h2>
-          <p className="text-gray-500 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-500 text-sm sm:text-lg max-w-2xl mx-auto">
             Sự hài lòng của khách hàng là thước đo thành công lớn nhất của BT DECOM.
           </p>
         </div>
@@ -49,7 +49,7 @@ export function TestimonialSection() {
           >
             {testimonials.map((testimonial) => (
               <SwiperSlide key={testimonial.id}>
-                <div className="bg-brand-light p-8 md:p-10 rounded-2xl h-full flex flex-col relative border border-transparent hover:border-brand-gold/20 transition-colors">
+                <div className="bg-brand-light p-6 sm:p-8 md:p-10 rounded-xl sm:rounded-2xl h-full flex flex-col relative border border-transparent hover:border-brand-gold/20 transition-colors">
                   <Quote className="absolute top-8 right-8 text-brand-gold/10 w-24 h-24 -rotate-12" />
                   
                   <div className="flex gap-1 mb-6 relative z-10">
@@ -58,7 +58,7 @@ export function TestimonialSection() {
                     ))}
                   </div>
                   
-                  <p className="text-brand-dark/80 italic text-lg mb-8 flex-grow relative z-10 leading-relaxed">
+                  <p className="text-brand-dark/80 italic text-sm sm:text-lg mb-6 sm:mb-8 flex-grow relative z-10 leading-relaxed">
                     &ldquo;{testimonial.content}&rdquo;
                   </p>
                   
