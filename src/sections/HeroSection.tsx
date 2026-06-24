@@ -54,13 +54,13 @@ export function HeroSection({ projects = [] }: HeroSectionProps) {
       <div className="container relative z-20 mx-auto px-4 md:px-6 pt-32 pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left - Main Content */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 text-center lg:text-left">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-[80px] text-white font-bold leading-[1.1] mb-8">
+              <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[80px] text-white font-bold leading-[1.1] mb-6 md:mb-8">
                 Chúng tôi sống <br />
                 vì thử thách
               </h1>
@@ -70,14 +70,30 @@ export function HeroSection({ projects = [] }: HeroSectionProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl leading-relaxed"
+              className="text-base sm:text-lg md:text-xl text-white/80 mb-8 md:mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
             >
               Tại BT DECOM, chúng tôi hợp tác với khách hàng để hiện thực hóa tham vọng của họ, thực hiện các dự án tạo ra sự khác biệt lâu dài và có ý nghĩa đối với con người và cộng đồng trên toàn thế giới.
             </motion.p>
+
+            {/* CTA Button - visible on mobile only */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+              className="lg:hidden flex justify-center"
+            >
+              <Link
+                href="/projects"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#4ade80] text-[#0a2610] font-semibold rounded-full hover:bg-[#22c55e] transition-all duration-300"
+              >
+                Xem dự án
+                <ArrowRight size={20} />
+              </Link>
+            </motion.div>
           </div>
 
           {/* Right - Hero Slider Widget */}
-          <div className="lg:col-span-5 relative z-30 flex justify-center lg:justify-end">
+          <div className="lg:col-span-5 relative z-30 hidden lg:flex justify-end">
             {slides.length > 0 ? (
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
