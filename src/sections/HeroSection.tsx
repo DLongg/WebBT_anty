@@ -51,26 +51,27 @@ export function HeroSection({ projects = [] }: HeroSectionProps) {
       </div>
 
       {/* Content */}
-      <div className="container relative z-20 mx-auto px-4 md:px-6 pt-24 sm:pt-32 pb-12 sm:pb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div className="container relative z-20 mx-auto px-4 md:px-6 pt-32 sm:pt-32 pb-12 sm:pb-20 h-full flex flex-col justify-end sm:justify-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pb-32 sm:pb-0 mt-16 sm:mt-0">
           {/* Left - Main Content */}
-          <div className="lg:col-span-7 text-center lg:text-left">
+          <div className="lg:col-span-7 text-left">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="font-heading text-[28px] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[80px] text-white font-bold leading-[1.1] mb-4 md:mb-8">
+              <h1 className="font-heading text-[32px] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[80px] text-white font-bold leading-[1.2] mb-4">
                 Chúng tôi sống <br />
-                vì thử thách
+                vì <span className="text-[#4ade80]">thử thách</span>
               </h1>
+              <div className="w-12 h-1 bg-[#4ade80] rounded-full mb-6 mt-2" />
             </motion.div>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="text-sm sm:text-base md:text-xl text-white/80 mb-6 md:mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+              className="text-[14px] sm:text-base md:text-xl text-white/80 mb-8 md:mb-10 max-w-2xl leading-relaxed"
             >
               Tại BT DECOM, chúng tôi hợp tác với khách hàng để hiện thực hóa tham vọng của họ, thực hiện các dự án tạo ra sự khác biệt lâu dài và có ý nghĩa đối với con người và cộng đồng.
             </motion.p>
@@ -80,7 +81,7 @@ export function HeroSection({ projects = [] }: HeroSectionProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-              className="lg:hidden flex justify-center"
+              className="lg:hidden flex justify-start"
             >
               <Link
                 href="/projects"
