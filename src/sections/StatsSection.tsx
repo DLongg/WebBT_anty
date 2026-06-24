@@ -44,15 +44,6 @@ export function StatsSection() {
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className="text-center mb-16">
-
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-white mb-3 sm:mb-4">
-            Con Số Ấn Tượng
-          </h2>
-          <p className="text-white/50 text-sm sm:text-lg max-w-2xl mx-auto">
-            Những con số minh chứng cho sự phát triển và năng lực vượt trội của BT DECOM
-          </p>
-        </div>
 
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto divide-y md:divide-y-0 md:divide-x divide-white/10">
           <StatItem

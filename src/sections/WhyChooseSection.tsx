@@ -45,14 +45,14 @@ export function WhyChooseSection() {
                   initial={{ opacity: 0, y: 15 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
                   transition={{ duration: 0.4, delay: 0.2 + index * 0.08 }}
-                  className="flex items-start gap-3 bg-white p-4 sm:p-5 rounded-xl border border-gray-100 hover:border-brand-gold/20 hover:shadow-lg hover:shadow-brand-gold/5 transition-all duration-300"
+                  className="flex items-start gap-3 sm:gap-4 bg-white p-4 sm:p-5 rounded-xl border border-gray-100 hover:border-brand-gold/20 hover:shadow-lg hover:shadow-brand-gold/5 transition-all duration-300"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-brand-gold/10 flex items-center justify-center shrink-0 mt-0.5">
-                    <CheckCircle2 className="text-brand-gold" size={16} />
+                  <div className="w-9 h-9 rounded-lg bg-brand-gold/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <CheckCircle2 className="text-brand-gold" size={18} />
                   </div>
                   <div>
-                    <div className="text-brand-dark font-semibold text-sm mb-0.5">{adv.title}</div>
-                    <div className="text-gray-500 text-xs leading-relaxed">{adv.desc}</div>
+                    <div className="text-brand-dark font-bold text-[15px] sm:text-base mb-0.5">{adv.title}</div>
+                    <div className="text-gray-500 text-[13px] sm:text-sm leading-relaxed">{adv.desc}</div>
                   </div>
                 </motion.div>
               ))}

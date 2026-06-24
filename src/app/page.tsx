@@ -25,8 +25,8 @@ export default function Home() {
       <AboutSection />
       <CoreValuesSection />
       <ServicesSection />
-      <StatsSection />
       <WhyChooseSection />
+      <StatsSection />
       <ProcessSection />
       <ProjectsSection />
       <NewsSection />
