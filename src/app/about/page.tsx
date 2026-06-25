@@ -1,406 +1,416 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CTASection } from "@/sections/CTASection";
-import { FileText, Building2, Users, Banknote, ShieldCheck, HardHat, Wrench, Zap, ChevronDown, Clock } from "lucide-react";
+import { Accordion } from "@/components/ui/Accordion";
+import { CopyButton } from "@/components/ui/CopyButton";
+import { EquipmentModal } from "@/components/ui/EquipmentModal";
+import { FileText, Building2, Users, Banknote, HardHat, Wrench, Zap, Clock, Calendar, CheckCircle2, ChevronRight, ArrowRight, Phone } from "lucide-react";
+import Image from "next/image";
 
 export default function AboutPage() {
+  const personnelAccordionItems = [
+    {
+      title: "Chi tiết Cán bộ chuyên môn (28 người)",
+      content: (
+        <div className="space-y-4">
+          <div>
+            <strong className="text-brand-dark">Trên Đại học (2 người):</strong> Thạc sĩ Quản trị kinh doanh.
+          </div>
+          <div>
+            <strong className="text-brand-dark">Đại học (20 người):</strong>
+            <ul className="list-disc pl-5 mt-2 space-y-1">
+              <li>5 KS hệ thống điện, 1 KS tự động hóa, 1 KS thiết bị điện</li>
+              <li>1 KS cơ khí chế tạo máy, 1 KS cơ khí ô tô, 1 KS xây dựng</li>
+              <li>2 KS tin học, 1 KS điện tử</li>
+              <li>Khối kinh tế: 2 CN Tài chính kế toán, 2 CN QTKD, 1 CN Kinh tế ngoại thương, 1 CN Luật, 1 CN Kinh tế lao động</li>
+            </ul>
+          </div>
+          <div>
+            <strong className="text-brand-dark">Cao đẳng (6 người):</strong> 5 CĐ hệ thống điện, 1 CĐ kế toán.
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Chi tiết Công nhân kỹ thuật (54 người)",
+      content: (
+        <div>
+          <p className="mb-3">Đội ngũ lành nghề, thâm niên cao, trải dài từ bậc 3/7 đến bậc 6/7.</p>
+          <div className="grid grid-cols-2 gap-3 font-medium">
+            <div className="flex items-center gap-2"><Zap size={16} className="text-brand-gold"/> 30 CN Kỹ thuật điện</div>
+            <div className="flex items-center gap-2"><Wrench size={16} className="text-brand-gold"/> 8 CN Cơ khí</div>
+            <div className="flex items-center gap-2"><CheckCircle2 size={16} className="text-brand-gold"/> 4 CN Hàn</div>
+            <div className="flex items-center gap-2"><CheckCircle2 size={16} className="text-brand-gold"/> 4 CN Xây dựng</div>
+            <div className="flex items-center gap-2"><CheckCircle2 size={16} className="text-brand-gold"/> 3 Lái cẩu</div>
+            <div className="flex items-center gap-2"><CheckCircle2 size={16} className="text-brand-gold"/> 2 Lái xe tải</div>
+            <div className="flex items-center gap-2 col-span-2"><CheckCircle2 size={16} className="text-brand-gold"/> 3 Nhân viên thí nghiệm</div>
+          </div>
+        </div>
+      ),
+    }
+  ];
+
+  const banks = [
+    { 
+      bank: "Vietcombank", 
+      branch: "CN Thăng Long", 
+      number: "0491000017938",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Vietcombank_logo.svg/2560px-Vietcombank_logo.svg.png"
+    },
+    { 
+      bank: "MB Bank", 
+      branch: "CN Ba Đình - PGD Đội Cấn", 
+      number: "0341100302006",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Military_Bank_logo.svg/2560px-Military_Bank_logo.svg.png"
+    },
+    { 
+      bank: "SHB", 
+      branch: "CN Hàn Thuyên", 
+      number: "2227776868",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/SHB_Logo.svg/2560px-SHB_Logo.svg.png"
+    }
+  ];
+
   return (
     <>
       <Header />
       
-      {/* Banner */}
-      <div className="pt-32 pb-20 bg-brand-dark text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1541888081622-1ce4471fbdab?w=1920&q=80')] bg-cover bg-center" />
-        <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
-          <SectionHeading 
-            title="Hồ Sơ Năng Lực" 
-            subtitle="Với mô hình tổ chức gọn nhẹ, khoa học và đội ngũ cán bộ nhân viên giàu kinh nghiệm, BT DECOM luôn tự tin đáp ứng mọi yêu cầu khắt khe nhất của khách hàng về kỹ mỹ thuật và tình hình thực tế trên công trường."
-            alignment="center"
-            className="mb-8"
-          />
-          <a 
-            href="#" 
-            className="inline-flex items-center gap-2 bg-brand-gold text-white px-6 py-3 rounded-md font-bold hover:bg-brand-gold-light transition-colors"
-          >
-            <FileText size={20} />
-            Tải về Hồ sơ năng lực (PDF)
-          </a>
-        </div>
-      </div>
-      
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 md:px-6 max-w-5xl">
-          
-          {/* Company Introduction */}
-          <div className="mb-20">
-            <div className="text-center mb-14">
-              <p className="text-brand-gold font-semibold uppercase tracking-widest text-sm mb-3">Về chúng tôi</p>
-              <h2 className="text-3xl md:text-4xl font-bold font-heading text-brand-dark inline-block relative">
-                Giới Thiệu Chung
-                <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-brand-gold to-brand-gold-light rounded-full"></div>
-              </h2>
-            </div>
-
-            {/* Hero intro block */}
-            <div className="relative rounded-2xl overflow-hidden mb-10">
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-dark via-[#1e3a20] to-brand-gold-dark opacity-95" />
-              <div className="absolute top-0 right-0 w-80 h-80 bg-brand-gold/10 rounded-full blur-3xl" />
-              <div className="absolute bottom-0 left-0 w-60 h-60 bg-brand-green/10 rounded-full blur-3xl" />
-              <div className="relative z-10 p-8 md:p-12 flex gap-6">
-                <div className="hidden md:block w-1.5 shrink-0 rounded-full bg-gradient-to-b from-brand-gold via-brand-gold-light to-brand-green" />
-                <div className="text-white/90 text-lg leading-relaxed space-y-1">
-                  <p className="text-2xl md:text-[1.65rem] font-heading font-bold text-white mb-4">
-                    Công ty TNHH Xây lắp và Phát triển Thương mại BT
-                  </p>
-                  <p className="text-white/60 text-sm font-medium tracking-wide mb-6">BT TRADING DEVELOPMENT AND CONSTRUCTION COMPANY LIMITED – BT DECOM., LTD</p>
-                  <p>
-                    Được thành lập ngày 25 tháng 12 năm 2012, trải qua nhiều năm hình thành và phát triển, công ty đã từng bước khẳng định vị thế và uy tín trong lĩnh vực xây dựng và thương mại, trở thành đối tác tin cậy của nhiều khách hàng và đơn vị trên cả nước.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Key stats cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10">
-              {[
-                { icon: <Clock size={22} />, label: "Thành lập", value: "25/12/2012", sub: "Hơn 13 năm kinh nghiệm" },
-                { icon: <Building2 size={22} />, label: "Trụ sở chính", value: "Hà Nội", sub: "A40 khu TT 810, Thanh Trì" },
-                { icon: <Users size={22} />, label: "Đại diện pháp luật", value: "Bà Đào Thị Hà", sub: "Sở hữu 100% vốn công ty" },
-              ].map((item, idx) => (
-                <div key={idx} className="group relative bg-white rounded-xl border border-gray-100 p-6 shadow-sm hover:shadow-lg hover:border-brand-gold/30 transition-all duration-300 overflow-hidden">
-                  <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-brand-gold to-brand-gold-light scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-lg bg-brand-gold/10 flex items-center justify-center text-brand-gold">
-                      {item.icon}
-                    </div>
-                    <span className="text-xs uppercase tracking-wider text-gray-400 font-semibold">{item.label}</span>
-                  </div>
-                  <p className="text-xl font-bold font-heading text-brand-dark mb-1">{item.value}</p>
-                  <p className="text-sm text-gray-500">{item.sub}</p>
-                </div>
-              ))}
-            </div>
-
-            {/* Content blocks */}
-            <div className="space-y-6">
-              <div className="bg-white rounded-xl border border-gray-100 p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex gap-5">
-                  <div className="hidden md:block w-1 shrink-0 rounded-full bg-brand-gold/40" />
-                  <div className="text-gray-700 leading-relaxed text-[1.05rem] space-y-4">
-                    <p>
-                      BT DECOM không ngừng đầu tư, nâng cao năng lực quản lý, năng lực thi công và chất lượng dịch vụ nhằm đáp ứng ngày càng tốt hơn các yêu cầu của khách hàng, đồng thời hướng tới sự phát triển bền vững và lâu dài.
-                    </p>
-                    <p>
-                      Với sự điều hành năng động, tâm huyết cùng định hướng phát triển rõ ràng, Ban lãnh đạo công ty luôn chú trọng xây dựng môi trường làm việc chuyên nghiệp, phát huy tối đa năng lực của đội ngũ cán bộ, kỹ sư và người lao động.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-xl border border-gray-100 p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex gap-5">
-                  <div className="hidden md:block w-1 shrink-0 rounded-full bg-brand-green/60" />
-                  <p className="text-gray-700 leading-relaxed text-[1.05rem]">
-                    Bộ máy tổ chức của công ty được xây dựng theo mô hình tinh gọn, khoa học và hiệu quả, bao gồm Ban Giám đốc cùng các phòng ban chuyên môn như Phòng Kế hoạch Tổng hợp, Phòng Kỹ thuật Vật tư, Phòng Tài chính Kế toán và ba đội xây lắp trực tiếp thi công. Cơ cấu tổ chức này giúp doanh nghiệp chủ động trong công tác quản lý, triển khai dự án và bảo đảm tiến độ cũng như chất lượng công trình.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Quote section */}
-            <div className="relative mt-10 rounded-2xl overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-brand-gold-dark via-brand-gold to-brand-gold-light opacity-95" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.15),transparent_60%)]" />
-              <div className="relative z-10 p-8 md:p-10 flex items-start gap-5">
-                <span className="hidden md:block text-6xl font-serif text-white/30 leading-none -mt-2 shrink-0">&ldquo;</span>
-                <div>
-                  <p className="text-white text-lg md:text-xl leading-relaxed font-medium italic">
-                    Với phương châm lấy chất lượng, uy tín và sự hài lòng của khách hàng làm nền tảng phát triển, Công ty TNHH Xây lắp và Phát triển Thương mại BT luôn nỗ lực không ngừng để mang đến những sản phẩm và dịch vụ tốt nhất, góp phần tạo dựng những công trình bền vững, an toàn và có giá trị lâu dài cho cộng đồng.
-                  </p>
-                  <p className="text-white/60 text-sm mt-4 font-semibold uppercase tracking-wider">— Ban lãnh đạo BT DECOM</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
-            {/* Legal Info */}
-            <div>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-lg bg-brand-green/30 flex items-center justify-center text-brand-gold">
-                  <Building2 size={24} />
-                </div>
-                <h2 className="text-2xl font-bold font-heading text-brand-dark">Thông tin chung & Pháp lý</h2>
-              </div>
-              <ul className="space-y-4 text-gray-700">
-                <li className="flex items-start gap-3">
-                  <span className="font-semibold min-w-32 shrink-0">Tên tiếng Việt:</span>
-                  <span>CÔNG TY TNHH XÂY LẮP VÀ PHÁT TRIỂN THƯƠNG MẠI BT</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="font-semibold min-w-32 shrink-0">Tên tiếng Anh:</span>
-                  <span>BT TRADING DEVELOPMENT AND CONSTRUCTION COMPANY LIMITED</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="font-semibold min-w-32 shrink-0">Tên viết tắt:</span>
-                  <span>BT DECOM., LTD</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="font-semibold min-w-32 shrink-0">Loại hình DN:</span>
-                  <span>Công ty trách nhiệm hữu hạn một thành viên</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="font-semibold min-w-32 shrink-0">Ngày đăng ký:</span>
-                  <span>25/12/2012</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Leadership */}
-            <div>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-lg bg-brand-green/30 flex items-center justify-center text-brand-gold">
-                  <Users size={24} />
-                </div>
-                <h2 className="text-2xl font-bold font-heading text-brand-dark">Ban lãnh đạo & Kế toán</h2>
-              </div>
-              
-              <div className="bg-brand-light p-6 rounded-xl mb-6">
-                <h3 className="font-bold text-lg text-brand-dark mb-1">Bà Đào Thị Hà</h3>
-                <p className="text-sm text-brand-gold font-medium mb-3">Người đại diện theo pháp luật</p>
-                <p className="text-gray-600 text-sm">Nắm giữ 100% tỷ lệ sở hữu của công ty.</p>
-              </div>
-
-              <div className="bg-white border border-gray-100 p-6 rounded-xl shadow-sm">
-                <h3 className="font-bold text-lg text-brand-dark mb-1">Ông Mai Thanh Hải</h3>
-                <p className="text-sm text-gray-500 font-medium mb-2">Kế toán trưởng / Phụ trách kế toán</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Company Capacity: HR & Equipment */}
-          <div className="mb-20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold font-heading text-brand-dark inline-block relative">
-                Năng Lực Cốt Lõi
-                <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-12 h-1 bg-brand-gold rounded-full"></div>
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Human Resources */}
-              <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-green/10 rounded-bl-full -z-10" />
-                
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="w-14 h-14 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold shrink-0">
-                    <HardHat size={28} />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold font-heading text-brand-dark">Năng lực Nhân sự</h3>
-                    <p className="text-gray-500">Đội ngũ 82 nhân sự chuyên môn cao</p>
-                  </div>
-                </div>
-
-                <div className="space-y-6">
-                  <div>
-                    <h4 className="font-bold text-brand-dark mb-3 text-lg flex items-center justify-between">
-                      Cán bộ chuyên môn (28 người)
-                    </h4>
-                    <div className="space-y-3 text-sm text-gray-600 bg-gray-50 p-4 rounded-lg border border-gray-100">
-                      <div className="flex items-start gap-2">
-                        <span className="w-2 h-2 mt-1.5 rounded-full bg-brand-gold shrink-0" />
-                        <div><strong>Trên Đại học (2 người):</strong> Thạc sĩ Quản trị kinh doanh.</div>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <span className="w-2 h-2 mt-1.5 rounded-full bg-brand-gold shrink-0" />
-                        <div><strong>Đại học (20 người):</strong> 5 KS hệ thống điện, 1 KS tự động hóa, 1 KS thiết bị điện, 1 KS cơ khí chế tạo máy, 1 KS cơ khí ô tô, 1 KS xây dựng, 2 KS tin học, 1 KS điện tử. Khối kinh tế: 2 CN Tài chính kế toán, 2 CN QTKD, 1 CN Kinh tế ngoại thương, 1 CN Luật, 1 CN Kinh tế lao động.</div>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <span className="w-2 h-2 mt-1.5 rounded-full bg-brand-gold shrink-0" />
-                        <div><strong>Cao đẳng (6 người):</strong> 5 CĐ hệ thống điện, 1 CĐ kế toán.</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h4 className="font-bold text-brand-dark mb-3 text-lg">Công nhân kỹ thuật (54 người)</h4>
-                    <div className="space-y-3 text-sm text-gray-600 bg-gray-50 p-4 rounded-lg border border-gray-100">
-                      <p>Đội ngũ lành nghề, thâm niên cao, trải dài từ bậc 3/7 đến bậc 6/7.</p>
-                      <div className="grid grid-cols-2 gap-2 mt-2 font-medium">
-                        <div className="flex items-center gap-2"><Zap size={14} className="text-brand-gold"/> 30 CN Kỹ thuật điện</div>
-                        <div className="flex items-center gap-2"><Wrench size={14} className="text-brand-gold"/> 8 CN Cơ khí</div>
-                        <div className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-brand-gold ml-1"/> 4 CN Hàn</div>
-                        <div className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-brand-gold ml-1"/> 4 CN Xây dựng</div>
-                        <div className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-brand-gold ml-1"/> 3 Lái cẩu</div>
-                        <div className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-brand-gold ml-1"/> 2 Lái xe tải</div>
-                        <div className="flex items-center gap-2 col-span-2"><div className="w-1.5 h-1.5 rounded-full bg-brand-gold ml-1"/> 3 Nhân viên thí nghiệm</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Equipment & Machinery */}
-              <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm relative overflow-hidden flex flex-col">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-gold/10 rounded-bl-full -z-10" />
-                
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 rounded-full bg-brand-green/20 flex items-center justify-center text-brand-gold shrink-0">
-                    <Wrench size={28} />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold font-heading text-brand-dark">Máy móc & Thiết bị</h3>
-                    <p className="text-gray-500">Hơn 40 loại thiết bị hạng nặng và chuyên dụng</p>
-                  </div>
-                </div>
-
-                <div className="bg-brand-gold text-white p-4 rounded-lg mb-6 shadow-md border-l-4 border-brand-dark font-medium text-sm flex items-start gap-3">
-                  <Clock size={20} className="shrink-0 mt-0.5" />
-                  <p><strong>Cam kết tốc độ:</strong> Toàn bộ máy móc được tập kết tại nội thành Hà Nội. Khả năng cơ động và sẵn sàng có mặt tại công trình <strong>khi có yêu cầu</strong>.</p>
-                </div>
-
-                <div className="space-y-4 text-sm flex-grow">
-                  <div className="border border-gray-100 rounded-lg overflow-hidden">
-                    <div className="bg-gray-50 px-4 py-3 font-bold text-brand-dark border-b border-gray-100">Xe cơ giới & Thủy lực</div>
-                    <div className="p-4 text-gray-600 bg-white leading-relaxed">
-                      Xe cẩu 10T KATO (Nhật Bản), Xe tải 5T (Đức), Xe cẩu tự hành 12.5T (Nhật Bản). Máy đột lỗ thủy lực 50T (Thụy Điển), Kìm ép cốt, Kích thủy lực 10T/5T (Nga)...
-                    </div>
-                  </div>
-
-                  <div className="border border-gray-100 rounded-lg overflow-hidden">
-                    <div className="bg-gray-50 px-4 py-3 font-bold text-brand-dark border-b border-gray-100">Thiết bị Điện & Thí nghiệm</div>
-                    <div className="p-4 text-gray-600 bg-white leading-relaxed">
-                      <strong>Thí nghiệm:</strong> Máy đo điện trở đất AID 70 (Nhật Bản), Máy thử cao áp, Mêgôm mét 2500V (Nga), Cẩu đo P333T.<br/>
-                      <strong>Thi công:</strong> Phát điện 5KVA HONDA, Máy hàn 25KVA, Máy cắt rãnh bê tông (Nhật)...
-                    </div>
-                  </div>
-                </div>
-                
-                <button className="mt-6 w-full py-3 flex items-center justify-center gap-2 text-brand-gold font-bold bg-brand-gold/5 rounded-lg hover:bg-brand-gold/10 transition-colors">
-                  <ChevronDown size={18} /> Xem toàn bộ danh sách 50+ thiết bị
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Organizational Chart */}
-          <div className="mb-20">
-            <div className="flex items-center gap-3 mb-8 justify-center">
-              <div className="w-12 h-12 rounded-lg bg-brand-green/30 flex items-center justify-center text-brand-gold">
-                <ShieldCheck size={24} />
-              </div>
-              <h2 className="text-3xl font-bold font-heading text-brand-dark text-center">Sơ đồ tổ chức</h2>
-            </div>
-            
-            <div className="bg-brand-light/50 p-8 md:p-12 rounded-2xl border border-gray-100 overflow-x-auto">
-              <div className="min-w-[700px] flex flex-col items-center">
-                
-                {/* Level 1 */}
-                <div className="bg-brand-gold text-white font-bold py-3 px-8 rounded-lg shadow-md relative mb-12">
-                  Ban Giám đốc
-                  <div className="absolute left-1/2 -bottom-12 w-px h-12 bg-gray-300"></div>
-                </div>
-
-                {/* Level 2 Container */}
-                <div className="w-full relative flex justify-between px-10 mb-12">
-                  {/* Horizontal line connecting departments */}
-                  <div className="absolute top-0 left-[15%] right-[15%] h-px bg-gray-300"></div>
-                  
-                  {/* Department 1 */}
-                  <div className="relative flex flex-col items-center">
-                    <div className="absolute left-1/2 -top-6 w-px h-6 bg-gray-300"></div>
-                    <div className="bg-white border-2 border-brand-gold text-brand-dark font-bold py-3 px-6 rounded-lg shadow-sm text-center w-48 z-10 relative">
-                      Phòng Kế hoạch <br/> Tổng hợp
-                      <div className="absolute left-1/2 -bottom-12 w-px h-12 bg-gray-300"></div>
-                    </div>
-                  </div>
-
-                  {/* Department 2 */}
-                  <div className="relative flex flex-col items-center">
-                    <div className="absolute left-1/2 -top-0 w-px h-0 bg-gray-300"></div>
-                    <div className="bg-white border-2 border-brand-gold text-brand-dark font-bold py-3 px-6 rounded-lg shadow-sm text-center w-48 z-10 relative">
-                      Phòng Kỹ thuật <br/> Vật tư
-                      <div className="absolute left-1/2 -bottom-12 w-px h-12 bg-gray-300"></div>
-                    </div>
-                  </div>
-
-                  {/* Department 3 */}
-                  <div className="relative flex flex-col items-center">
-                    <div className="absolute left-1/2 -top-6 w-px h-6 bg-gray-300"></div>
-                    <div className="bg-white border-2 border-brand-gold text-brand-dark font-bold py-3 px-6 rounded-lg shadow-sm text-center w-48 z-10 relative">
-                      Phòng Tài chính <br/> Kế toán
-                      <div className="absolute left-1/2 -bottom-12 w-px h-12 bg-gray-300"></div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Level 3 Container */}
-                <div className="w-[80%] relative flex justify-between px-4">
-                  {/* Horizontal line connecting execution teams */}
-                  <div className="absolute -top-12 left-[10%] right-[10%] h-px bg-gray-300"></div>
-                  
-                  {['Đội Xây Lắp 1', 'Đội Xây Lắp 2', 'Đội Xây Lắp 3'].map((team, idx) => (
-                    <div key={idx} className="relative flex flex-col items-center">
-                      <div className="absolute left-1/2 -top-12 w-px h-12 bg-gray-300"></div>
-                      <div className="bg-gray-100 text-gray-700 font-bold py-2 px-6 rounded-md shadow-sm border border-gray-200 text-center w-36 z-10">
-                        {team}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          {/* Bank Accounts */}
-          <div>
-            <div className="flex items-center gap-3 mb-8 justify-center">
-              <div className="w-12 h-12 rounded-lg bg-brand-green/30 flex items-center justify-center text-brand-gold">
-                <Banknote size={24} />
-              </div>
-              <h2 className="text-3xl font-bold font-heading text-brand-dark text-center">Thông tin Giao dịch / Ngân hàng</h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                { 
-                  bank: "Vietcombank", 
-                  branch: "CN Thăng Long", 
-                  number: "0491000017938",
-                  logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Vietcombank_logo.svg/2560px-Vietcombank_logo.svg.png"
-                },
-                { 
-                  bank: "MB Bank", 
-                  branch: "CN Ba Đình - PGD Đội Cấn", 
-                  number: "0341100302006",
-                  logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Military_Bank_logo.svg/2560px-Military_Bank_logo.svg.png"
-                },
-                { 
-                  bank: "SHB", 
-                  branch: "CN Hàn Thuyên", 
-                  number: "2227776868",
-                  logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/SHB_Logo.svg/2560px-SHB_Logo.svg.png"
-                }
-              ].map((acc, idx) => (
-                <div key={idx} className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                  <div className="h-8 mb-4">
-                    <img src={acc.logo} alt={acc.bank} className="h-full object-contain object-left" />
-                  </div>
-                  <div className="text-sm text-gray-500 mb-1">{acc.branch}</div>
-                  <div className="text-xl font-bold text-brand-dark tracking-wider">{acc.number}</div>
-                  <div className="text-xs text-gray-400 mt-4 uppercase">Chủ tài khoản: CÔNG TY TNHH XÂY LẮP VÀ PHÁT TRIỂN THƯƠNG MẠI BT</div>
-                </div>
-              ))}
-            </div>
-          </div>
+      {/* 1. Hero Section */}
+      <section className="relative pt-32 pb-32 lg:pt-40 lg:pb-40 bg-brand-dark text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888081622-1ce4471fbdab?w=1920&q=80')] bg-cover bg-center opacity-30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/80 to-transparent" />
+        
+        <div className="container mx-auto px-4 relative z-10 text-center max-w-4xl">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6 drop-shadow-md">
+            VỀ CHÚNG TÔI
+          </h1>
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-200 mb-10 leading-relaxed max-w-3xl mx-auto">
+            Hơn 13 năm kinh nghiệm trong lĩnh vực xây lắp và phát triển thương mại
+          </p>
 
         </div>
       </section>
-      
-      <CTASection />
+
+      {/* 2. Chỉ số nổi bật (Overlapping Hero) */}
+      <section className="relative z-20 -mt-16 mb-20 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <div className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100 p-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x-0 md:divide-x divide-gray-100">
+              {[
+                { number: "13+", label: "Năm kinh nghiệm" },
+                { number: "82", label: "Nhân sự" },
+                { number: "50+", label: "Thiết bị" },
+                { number: "3", label: "Đội xây lắp" }
+              ].map((stat, idx) => (
+                <div key={idx} className="text-center px-4">
+                  <div className="text-4xl md:text-5xl font-bold text-brand-gold font-heading mb-2">{stat.number}</div>
+                  <div className="text-gray-500 font-medium">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Giới thiệu công ty (Text + Image) */}
+      <section className="py-16 bg-white overflow-hidden">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            <div className="w-full lg:w-1/2 relative">
+              <div className="absolute -inset-4 bg-brand-gold/10 rounded-[2rem] transform -rotate-3 -z-10"></div>
+              <img 
+                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80" 
+                alt="Công trình BT DECOM" 
+                className="w-full h-auto rounded-2xl shadow-xl object-cover aspect-[4/3]"
+              />
+            </div>
+            <div className="w-full lg:w-1/2">
+              <p className="text-brand-gold font-semibold uppercase tracking-widest mb-3 flex items-center gap-2">
+                <span className="w-8 h-0.5 bg-brand-gold"></span> Về BT DECOM
+              </p>
+              <h2 className="text-3xl md:text-4xl font-bold font-heading text-brand-dark mb-6 leading-tight">
+                CÔNG TY TNHH XÂY LẮP VÀ PHÁT TRIỂN THƯƠNG MẠI BT
+              </h2>
+              <div className="w-20 h-1 bg-gradient-to-r from-brand-gold to-brand-green mb-8 rounded-full"></div>
+              <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                Thành lập từ năm 2012, <strong>BT DECOM</strong> đã từng bước khẳng định vị thế trong lĩnh vực xây dựng và thương mại, trở thành đối tác tin cậy của nhiều khách hàng trên cả nước.
+              </p>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                Chúng tôi không ngừng đầu tư nâng cao năng lực quản lý, thi công và chất lượng dịch vụ để đáp ứng các yêu cầu khắt khe nhất, hướng tới sự phát triển bền vững và lâu dài.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Timeline phát triển */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold font-heading text-brand-dark mb-4">Hành Trình Phát Triển</h2>
+            <div className="w-24 h-1 bg-brand-gold mx-auto rounded-full"></div>
+          </div>
+          
+          <div className="relative max-w-4xl mx-auto">
+            {/* The vertical line */}
+            <div className="absolute left-[19px] md:left-1/2 top-0 bottom-0 w-1 bg-brand-gold/30 transform md:-translate-x-1/2"></div>
+            
+            {[
+              { year: "2012", desc: "Thành lập công ty" },
+              { year: "2015", desc: "Mở rộng lĩnh vực thi công" },
+              { year: "2020", desc: "Nâng cấp năng lực thiết bị" },
+              { year: "2025", desc: "Hơn 82 nhân sự chuyên môn" }
+            ].map((item, idx) => {
+              const isLeft = idx % 2 === 0;
+              return (
+                <div key={idx} className={`relative mb-12 md:w-1/2 pl-12 ${isLeft ? 'md:pl-0 md:pr-10 md:text-right md:ml-0' : 'md:pl-10 md:text-left md:ml-auto'}`}>
+                  {/* Dot */}
+                  <div className={`absolute left-[11px] top-6 w-5 h-5 bg-brand-gold rounded-full border-4 border-white shadow-sm z-10 ${isLeft ? 'md:left-full md:-translate-x-1/2' : 'md:left-0 md:-translate-x-1/2'}`}></div>
+                  
+                  {/* Content */}
+                  <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <span className="text-3xl font-bold text-brand-gold mb-2 block font-heading">{item.year}</span>
+                    <p className="text-gray-700 font-medium text-lg">{item.desc}</p>
+                  </div>
+                </div>
+              );
+            })}
+            
+            <div className={`relative md:w-1/2 pl-12 md:pl-10 md:text-left md:ml-auto`}>
+                <div className={`absolute left-[13px] top-3 w-4 h-4 bg-brand-green rounded-full border-2 border-white shadow-sm animate-pulse z-10 md:left-0 md:-translate-x-1/2`}></div>
+                <div className="pt-2">
+                  <span className="text-2xl font-bold text-brand-green/80 italic font-heading">2026 & Tương lai...</span>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Thông tin nhanh */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            {[
+              { label: "Thành lập", value: "25/12/2012", icon: <Calendar className="text-brand-gold/50 mb-3" size={32} /> },
+              { label: "Trụ sở", value: "Hà Nội", icon: <Building2 className="text-brand-gold/50 mb-3" size={32} /> },
+              { label: "Đại diện", value: "Đào Thị Hà", icon: <Users className="text-brand-gold/50 mb-3" size={32} /> },
+              { label: "Loại hình", value: "TNHH MTV", icon: <FileText className="text-brand-gold/50 mb-3" size={32} /> }
+            ].map((info, idx) => (
+              <div key={idx} className="bg-brand-light/30 border border-brand-green/10 rounded-xl p-6 flex flex-col items-center justify-center text-center hover:bg-brand-light/60 transition-colors">
+                {info.icon}
+                <span className="text-sm text-gray-500 uppercase tracking-wider font-semibold mb-1">{info.label}</span>
+                <span className="text-lg md:text-xl font-bold text-brand-dark">{info.value}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Thông điệp lãnh đạo */}
+      <section className="py-20 bg-brand-dark relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-green/10 rounded-full blur-[100px]"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-gold/10 rounded-full blur-[100px]"></div>
+        <div className="container mx-auto px-4 max-w-4xl relative z-10 text-center">
+          <span className="text-brand-gold text-6xl md:text-8xl leading-none font-serif opacity-50 absolute -top-4 md:-top-10 left-0 md:-left-10">"</span>
+          <p className="text-xl md:text-3xl text-white font-light leading-relaxed italic mb-8 relative z-10">
+            Với phương châm lấy chất lượng, uy tín và sự hài lòng của khách hàng làm nền tảng phát triển, BT DECOM luôn nỗ lực mang đến những công trình bền vững và an toàn.
+          </p>
+          <span className="text-brand-gold text-6xl md:text-8xl leading-none font-serif opacity-50 absolute bottom-0 right-0 md:-right-10 rotate-180">"</span>
+          <p className="text-brand-gold font-bold text-lg uppercase tracking-widest">— Ban lãnh đạo BT DECOM</p>
+        </div>
+      </section>
+
+      {/* 7. Năng lực nhân sự */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold font-heading text-brand-dark mb-4">Năng Lực Nhân Sự</h2>
+            <div className="w-24 h-1 bg-brand-gold mx-auto rounded-full mb-8"></div>
+            <div className="inline-flex items-center gap-3 bg-brand-dark text-white px-8 py-3 rounded-full font-bold text-lg shadow-lg shadow-brand-dark/20">
+              <Users size={24} className="text-brand-gold" />
+              Tổng quan: 82 Nhân sự
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
+            {[
+              { count: "28", label: "Cán bộ" },
+              { count: "54", label: "Công nhân" },
+              { count: "20", label: "Kỹ sư ĐH" },
+              { count: "2", label: "Thạc sĩ" }
+            ].map((stat, idx) => (
+              <div key={idx} className="bg-white border-b-4 border-brand-gold rounded-xl p-6 text-center shadow-sm">
+                <div className="text-4xl font-bold text-brand-dark mb-1">{stat.count}</div>
+                <div className="text-gray-500 font-medium">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+
+          <div className="max-w-3xl mx-auto">
+            <Accordion items={personnelAccordionItems} />
+          </div>
+        </div>
+      </section>
+
+      {/* 8. Máy móc thiết bị */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold font-heading text-brand-dark mb-4">Máy Móc Thiết Bị</h2>
+              <div className="w-24 h-1 bg-brand-gold rounded-full"></div>
+            </div>
+            <div className="shrink-0">
+              <EquipmentModal />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { icon: "🚛", text: "Xe cẩu 10T KATO" },
+              { icon: "🚚", text: "Xe tải 5T" },
+              { icon: "🏗️", text: "Xe cẩu tự hành 12.5T" },
+              { icon: "⚡", text: "Máy thử cao áp" },
+              { icon: "🔧", text: "Máy hàn 25KVA" },
+              { icon: "📏", text: "Máy đo điện trở đất" }
+            ].map((item, idx) => (
+              <div key={idx} className="flex items-center gap-4 bg-gray-50 p-6 rounded-xl border border-gray-100 hover:border-brand-gold/50 hover:bg-white hover:shadow-md transition-all group">
+                <div className="text-3xl group-hover:scale-110 transition-transform">{item.icon}</div>
+                <span className="font-bold text-gray-700 group-hover:text-brand-dark">{item.text}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 9. Sơ đồ tổ chức */}
+      <section className="py-20 bg-gray-50 overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold font-heading text-brand-dark mb-4">Sơ Đồ Tổ Chức</h2>
+            <div className="w-24 h-1 bg-brand-gold mx-auto rounded-full"></div>
+          </div>
+
+          <div className="flex justify-center overflow-x-auto pb-8">
+            <div className="min-w-[800px] flex flex-col items-center">
+
+              {/* Level 1: Ban Giám Đốc */}
+              <div className="relative mb-16">
+                <div className="bg-brand-dark text-white font-bold py-4 px-10 rounded-xl shadow-lg border-b-4 border-brand-gold text-center text-lg">
+                  Ban Giám Đốc
+                </div>
+                <div className="absolute left-1/2 -bottom-16 w-0.5 h-16 bg-gray-300 -translate-x-1/2"></div>
+              </div>
+
+              {/* Level 2: 3 Phòng ban */}
+              <div className="relative w-full max-w-[750px] mb-16">
+                {/* Horizontal connector line */}
+                <div className="absolute top-0 left-[16.66%] right-[16.66%] h-0.5 bg-gray-300"></div>
+
+                <div className="grid grid-cols-3 gap-6">
+                  {/* Phòng Kế hoạch Tổng hợp */}
+                  <div className="relative flex flex-col items-center">
+                    <div className="absolute left-1/2 -top-6 w-0.5 h-6 bg-gray-300 -translate-x-1/2"></div>
+                    <div className="bg-white border border-gray-200 text-brand-dark font-bold py-4 px-4 rounded-lg shadow-sm text-center w-full z-10">
+                      <div className="text-sm">Phòng Kế hoạch</div>
+                      <div className="text-sm">Tổng hợp</div>
+                    </div>
+                  </div>
+
+                  {/* Phòng Kỹ thuật Vật tư (middle, connects down to teams) */}
+                  <div className="relative flex flex-col items-center">
+                    <div className="absolute left-1/2 -top-6 w-0.5 h-6 bg-gray-300 -translate-x-1/2"></div>
+                    <div className="bg-white border-2 border-brand-gold text-brand-dark font-bold py-4 px-4 rounded-lg shadow-md text-center w-full z-10 relative">
+                      <div className="text-sm">Phòng Kỹ thuật</div>
+                      <div className="text-sm">Vật tư</div>
+                      {/* Line down to teams */}
+                      <div className="absolute left-1/2 -bottom-16 w-0.5 h-16 bg-brand-gold/50 -translate-x-1/2"></div>
+                    </div>
+                  </div>
+
+                  {/* Phòng Tài chính Kế toán */}
+                  <div className="relative flex flex-col items-center">
+                    <div className="absolute left-1/2 -top-6 w-0.5 h-6 bg-gray-300 -translate-x-1/2"></div>
+                    <div className="bg-white border border-gray-200 text-brand-dark font-bold py-4 px-4 rounded-lg shadow-sm text-center w-full z-10">
+                      <div className="text-sm">Phòng Tài chính</div>
+                      <div className="text-sm">Kế toán</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Level 3: Đội Xây Lắp */}
+              <div className="flex flex-col gap-4 relative">
+                <div className="absolute -left-6 top-5 bottom-5 w-0.5 bg-brand-gold/40 rounded-full"></div>
+                {[1, 2, 3].map((num) => (
+                  <div key={num} className="relative flex items-center">
+                    <div className="absolute -left-6 w-6 h-0.5 bg-brand-gold/40"></div>
+                    <div className="bg-brand-green/10 border border-brand-green/20 text-brand-dark font-semibold py-3 px-8 rounded-md shadow-sm min-w-[220px] text-center">
+                      Đội Xây Lắp {num}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 10. Ngân hàng & Thông tin pháp lý */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold font-heading text-brand-dark mb-4">Tài Khoản Ngân Hàng</h2>
+            <div className="w-24 h-1 bg-brand-gold mx-auto rounded-full"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {banks.map((acc, idx) => (
+              <div key={idx} className="bg-white border border-gray-200 p-6 rounded-2xl shadow-sm hover:shadow-lg hover:border-brand-gold/30 transition-all">
+                <div className="h-10 mb-6 flex justify-center">
+                  <img src={acc.logo} alt={acc.bank} className="h-full object-contain" />
+                </div>
+                <div className="flex items-center justify-between bg-gray-50 p-3 rounded-lg border border-gray-100">
+                  <div>
+                    <div className="text-2xl font-bold text-brand-dark tracking-wider">{acc.number}</div>
+                  </div>
+                  <CopyButton textToCopy={acc.number} />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 11. CTA cuối trang */}
+      <section className="relative py-24 bg-brand-dark overflow-hidden text-center">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888081622-1ce4471fbdab?w=1920&q=80')] bg-cover bg-center opacity-40" />
+        <div className="absolute inset-0 bg-brand-dark/70" />
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent" />
+        
+        <div className="container mx-auto px-4 relative z-10 max-w-3xl">
+          <h2 className="text-3xl md:text-5xl font-bold font-heading text-white mb-6 leading-tight">
+            Bạn cần đơn vị thi công xây lắp chuyên nghiệp?
+          </h2>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-10">
+            <a 
+              href="/contact" 
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-gold text-white px-8 py-4 rounded-xl font-bold hover:bg-brand-gold-light transition-all shadow-lg"
+            >
+              Liên hệ tư vấn miễn phí <ArrowRight size={20} />
+            </a>
+            <a 
+              href="tel:0912345678" 
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-white hover:text-brand-gold transition-colors font-medium group"
+            >
+              <Phone size={20} className="text-gray-400 group-hover:text-brand-gold transition-colors" />
+              Hoặc gọi trực tiếp
+            </a>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </>
   );

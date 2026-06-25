@@ -2,51 +2,75 @@ import type { NewsArticle } from "@/types";
 
 export const news: NewsArticle[] = [
   {
-    id: "1",
-    slug: "bt-decom-hoan-thanh-chieu-sang-nut-giao-kim-ma",
-    title:
-      "BT DECOM hoàn thành dự án chiếu sáng nút giao Kim Mã - Nguyễn Chí Thanh",
-    excerpt:
-      "Công ty BT DECOM vừa hoàn thành bàn giao dự án thi công hệ thống chiếu sáng kiến trúc tại nút giao Kim Mã - Nguyễn Chí Thanh (Nút giao Daewoo), đánh dấu thêm một công trình chiếu sáng đô thị chất lượng cao tại Thủ đô.",
-    content:
-      "Cầu vượt tại nút giao Kim Mã - Nguyễn Chí Thanh, hay còn gọi là cầu vượt Daewoo, là công trình giao thông trọng điểm của Hà Nội, được đưa vào khai thác từ tháng 10 năm 2013. BT DECOM đã thi công lắp đặt đồng thời hai hệ thống: chiếu sáng giao thông trên cầu và chiếu sáng kiến trúc trang trí.\n\nHệ thống chiếu sáng giao thông bao gồm cột đèn, đèn LED và tủ điều khiển tự động trên toàn bộ chiều dài cầu, đảm bảo tiêu chuẩn chiếu sáng đô thị TCVN. Hệ thống chiếu sáng kiến trúc sử dụng đèn rửa tường và đèn chiếu điểm, tạo hiệu ứng đẹp mắt cho trụ cầu và lan can vào ban đêm.\n\nĐây là dự án chiếu sáng cầu vượt có quy mô và yêu cầu kỹ thuật cao nhất trong năm 2013 của BT DECOM, phối hợp cùng đối tác NEWTATCO.",
-    image:
-      "https://images.unsplash.com/photo-1514924013411-cbf25faa35bb?w=800&q=80",
+    id: "26",
+    slug: "hoan-thanh-cap-thoat-nuoc-du-an-t1",
+    title: "BT DECOM hoàn thành Hệ thống cấp thoát nước trong nhà - Dự án T1",
+    excerpt: "Công ty BT DECOM vừa hoàn thành bàn giao dự án thi công hệ thống cấp thoát nước trong nhà thuộc gói thầu số 16 Dự án T1 tại Thanh Liệt, Thanh Trì, Hà Nội.",
+    content: "Dự án T1 là một trong những công trình trọng điểm trong năm 2021. BT DECOM đã đảm nhận thi công hạng mục hệ thống cấp thoát nước trong nhà thuộc gói thầu số 16.\n\nTrong suốt quá trình thi công, đội ngũ kỹ sư và công nhân của BT DECOM đã nỗ lực không ngừng để đảm bảo tiến độ và chất lượng công trình, đáp ứng các tiêu chuẩn khắt khe nhất từ chủ đầu tư là Công ty TNHH MTV Phát triển Khu CNC Hòa Lạc.\n\nDự án hoàn thành đã một lần nữa khẳng định năng lực thi công chuyên nghiệp của BT DECOM trong lĩnh vực cơ điện M&E đối với các dự án dân dụng quy mô lớn.",
+    image: "/images/projects/cap-thoat-nuoc-trong-nha-du-an-t1/image.png",
     category: "Dự án",
     author: "BT DECOM",
-    date: "20/12/2013",
+    date: "12/2021",
+    readTime: "4 phút đọc",
+  },
+  {
+    id: "25",
+    slug: "thi-cong-he-thong-dien-du-an-t1",
+    title: "Thi công thành công Hệ thống điện chính - Dự án T1",
+    excerpt: "Tiếp tục khẳng định vị thế trong lĩnh vực xây lắp điện, BT DECOM đã thi công hoàn thiện hệ thống điện chính thức cho Dự án T1 tại Khu CNC Hòa Lạc.",
+    content: "Đồng hành cùng dự án T1 tại Khu công nghệ cao Hòa Lạc, BT DECOM đã đảm nhận gói thầu thi công xây lắp hệ thống điện chính thức.\n\nCông trình đòi hỏi yêu cầu kỹ thuật cao và tiến độ khẩn trương. Với kinh nghiệm thi công nhiều dự án lớn, BT DECOM đã triển khai các phương án thi công tối ưu, đảm bảo an toàn tuyệt đối và chất lượng kỹ thuật.\n\nSự thành công của hạng mục này tiếp tục củng cố uy tín của BT DECOM đối với chủ đầu tư Xí nghiệp quản lý và xây lắp cơ điện HHPD.",
+    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80",
+    category: "Dự án",
+    author: "BT DECOM",
+    date: "11/2021",
     readTime: "5 phút đọc",
   },
   {
-    id: "2",
-    slug: "cau-vuot-dai-co-viet-vuot-tien-do-45-ngay",
-    title:
-      "Cầu vượt Đại Cồ Việt - Trần Khát Chân vượt tiến độ 45 ngày: BT DECOM góp phần vào thành công",
-    excerpt:
-      "Cầu vượt Đại Cồ Việt - Trần Khát Chân dài hơn 352m, rộng 11m - công trình kỷ lục vượt tiến độ 45 ngày. BT DECOM tự hào đảm nhận thi công hạng mục chiếu sáng cho công trình này.",
-    content:
-      "Cầu vượt tại nút giao Đại Cồ Việt - Trần Khát Chân được khởi công ngày 17/01/2013 và hoàn thành thông xe ngày 30/08/2013, vượt tiến độ dự kiến khoảng 45 ngày. Cầu có chiều dài hơn 352m, rộng 11m, gồm 2 làn xe ô tô và 2 làn xe hỗn hợp, thiết kế trụ cầu hình chữ H cách điệu và dầm thép có độ cong mềm mại.\n\nBT DECOM đã thi công xây lắp hạng mục chiếu sáng trên toàn bộ chiều dài cầu theo hợp đồng phối hợp cùng NEWTATCO. Hệ thống chiếu sáng giao thông đảm bảo an toàn cho 4 làn xe, đồng thời hệ thống chiếu sáng kiến trúc tôn vinh thiết kế mỹ thuật độc đáo của trụ cầu.\n\nĐể phù hợp với tiến độ vượt trội của công trình, đội ngũ BT DECOM đã tổ chức thi công chủ yếu vào ban đêm và ngày nghỉ, đảm bảo hoàn thành đúng thời hạn.",
-    image:
-      "https://images.unsplash.com/photo-1545893835-abaa50cbe628?w=800&q=80",
+    id: "24",
+    slug: "he-thong-dien-nuoc-phu-tro-du-an-t1",
+    title: "Triển khai Hệ thống điện nước phụ trợ - Dự án T1",
+    excerpt: "BT DECOM hoàn thành hạng mục hạ tầng quan trọng: Hệ thống điện nước phụ trợ phục vụ thi công công trường Dự án T1 tại Khu CNC Hòa Lạc.",
+    content: "Để phục vụ cho quá trình thi công xây dựng dự án T1, hệ thống điện nước phụ trợ đóng vai trò vô cùng quan trọng. BT DECOM đã được Ban quản lý các dự án HHPD tin tưởng giao phó gói thầu này.\n\nChúng tôi đã nhanh chóng triển khai lắp đặt hệ thống điện tạm, trạm bơm nước và mạng lưới cấp nước phục vụ toàn bộ công trường, tạo tiền đề vững chắc cho các giai đoạn thi công tiếp theo của dự án.",
+    image: "/images/projects/dien-nuoc-phu-tro-du-an-t1/image.png",
     category: "Dự án",
     author: "BT DECOM",
-    date: "05/10/2013",
+    date: "05/2021",
+    readTime: "3 phút đọc",
+  },
+  {
+    id: "23",
+    slug: "dien-nuoc-nha-van-phong-a-chau",
+    title: "Bàn giao Điện nước nhà văn phòng - Xưởng sản xuất Á Châu",
+    excerpt: "BT DECOM bàn giao thành công hệ thống điện nước khu văn phòng thuộc dự án Nhà xưởng sản xuất Công ty CP Kỹ thuật Công nghiệp Á Châu.",
+    content: "Trong năm 2019, BT DECOM đã hoàn thành xuất sắc gói thầu thi công hệ thống điện và cấp thoát nước cho khu vực nhà văn phòng thuộc tổ hợp Nhà xưởng sản xuất Á Châu tại Khu CNC Hòa Lạc.\n\nDự án được triển khai với tiêu chuẩn cao về thẩm mỹ và công năng sử dụng, mang lại không gian làm việc tiện nghi, an toàn cho đội ngũ cán bộ công nhân viên của nhà máy.",
+    image: "/images/projects/dien-nuoc-nha-xuong-a-chau/image.png",
+    category: "Dự án",
+    author: "BT DECOM",
+    date: "09/2019",
+    readTime: "4 phút đọc",
+  },
+  {
+    id: "22",
+    slug: "he-thong-dien-toa-18-tang-tong-cuc-2",
+    title: "Hoàn thành Hệ thống điện tòa nhà 18 tầng - Nhà công vụ Tổng cục II",
+    excerpt: "BT DECOM tự hào là đơn vị thi công hệ thống điện cho tòa nhà chung cư 18 tầng thuộc dự án Nhà công vụ Tổng cục II (Giai đoạn 2) tại Liên Mạc.",
+    content: "Dự án Nhà công vụ Tổng cục II (Giai đoạn 2) tại Liên Mạc, Bắc Từ Liêm là công trình trọng điểm phục vụ cán bộ chiến sĩ. BT DECOM đã đảm nhận thi công toàn bộ hệ thống điện cho tòa nhà chung cư cao 18 tầng.\n\nKhối lượng công việc khổng lồ bao gồm hệ thống điện động lực, điện chiếu sáng, hệ thống chống sét và tiếp địa. Bằng sự chuyên nghiệp và quyết tâm, tập thể kỹ sư BT DECOM đã đưa dự án về đích đúng tiến độ, đảm bảo mọi tiêu chuẩn an toàn phòng cháy chữa cháy và quy chuẩn xây dựng hiện hành.",
+    image: "/images/projects/he-thong-dien-nha-cong-vu-tong-cuc-2/image.png",
+    category: "Dự án",
+    author: "BT DECOM",
+    date: "07/2019",
     readTime: "6 phút đọc",
   },
   {
-    id: "3",
-    slug: "tram-bien-ap-750kva-khu-phu-nu-ha-noi",
-    title:
-      "BT DECOM thi công trọn gói trạm biến áp 750 KVA và cáp ngầm 24KV cho Khu Liên hợp Phụ nữ Hà Nội",
-    excerpt:
-      "Công trình trạm biến áp 750 KVA, máy phát điện dự phòng 100 KVA cùng tuyến cáp ngầm trung thế 24KV - dự án khẳng định năng lực kỹ thuật toàn diện của BT DECOM trong lĩnh vực xây lắp điện.",
-    content:
-      "Khu Liên hợp Phát triển Phụ nữ Hà Nội là dự án trọng điểm phục vụ hoạt động xã hội và phát triển cộng đồng. BT DECOM được giao thầu thi công trọn gói hệ thống cấp điện, bao gồm ba hạng mục chính.\n\nThứ nhất, trạm biến áp 750 KVA với đầy đủ thiết bị đóng cắt trung thế, thanh cái, aptomat và hệ thống bảo vệ rơ-le. Thứ hai, máy phát điện diesel dự phòng 100 KVA kèm hệ thống chuyển đổi nguồn tự động (ATS) đảm bảo cấp điện không gián đoạn. Thứ ba, tuyến cáp ngầm trung thế 24KV từ lưới điện thành phố đến trạm biến áp.\n\nĐây là dự án có tính kỹ thuật cao nhất trong năm 2013, thể hiện năng lực của BT DECOM từ khâu thi công cáp ngầm trung thế đến lắp đặt trạm biến áp và hệ thống nguồn dự phòng.",
-    image:
-      "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80",
+    id: "21",
+    slug: "cap-thoat-nuoc-nha-cong-vu-tong-cuc-2",
+    title: "Nghiệm thu Hệ thống cấp thoát nước - Nhà công vụ Tổng cục II",
+    excerpt: "Hạng mục cấp thoát nước chung và căn hộ tại Nhà công vụ Tổng cục II đã được BT DECOM thi công và nghiệm thu thành công, đưa vào sử dụng an toàn.",
+    content: "Song song với hệ thống điện, BT DECOM cũng được tín nhiệm giao trọng trách thi công toàn bộ hệ thống cấp thoát nước cho dự án Nhà công vụ Tổng cục II.\n\nHệ thống bao gồm trạm bơm cấp nước sinh hoạt, mạng lưới đường ống cấp thoát nước cho hàng trăm căn hộ và hệ thống xử lý nước thải trung tâm. Sự phối hợp nhịp nhàng giữa các mũi thi công đã giúp BT DECOM hoàn thành xuất sắc nhiệm vụ, mang đến nguồn nước sạch và hạ tầng vệ sinh đảm bảo cho dự án.",
+    image: "/images/projects/cap-thoat-nuoc-nha-cong-vu-tong-cuc-2/image.png",
     category: "Dự án",
     author: "BT DECOM",
-    date: "15/11/2013",
-    readTime: "7 phút đọc",
-  },
+    date: "06/2019",
+    readTime: "5 phút đọc",
+  }
 ];

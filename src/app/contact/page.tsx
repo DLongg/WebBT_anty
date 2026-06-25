@@ -77,6 +77,7 @@ export default function ContactPage() {
             subtitle="BT DECOM sẵn sàng lắng nghe và đáp ứng mọi yêu cầu của Quý đối tác, khách hàng 24/7."
             alignment="center"
             className="mb-0"
+            light={true}
           />
         </div>
       </div>
@@ -297,7 +298,7 @@ export default function ContactPage() {
           {/* Google Maps */}
           <div className="h-[500px] lg:h-auto min-h-[400px] relative">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.688325435974!2d105.845014!3d20.965004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135add123456789%3A0xabcdef123456789!2zQSs0MCBLSFUgVE0gODEwLCBUaGFuaCBUcsOsLCBIw6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s" 
+              src="https://maps.google.com/maps?q=A40%20Khu%20Tập%20thể%20810,%20Vĩnh%20Quỳnh,%20Thanh%20Trì,%20Hà%20Nội&t=&z=15&ie=UTF8&iwloc=&output=embed" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 

@@ -120,7 +120,7 @@ export function Footer() {
             
             <div className="h-28 w-full rounded-md overflow-hidden relative mt-4">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14903.927652870867!2d105.84!3d20.92!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad1bce4f0000%3A0x0!2zVMOibiDEkOG7mWksIFRoYW5oIFRyw6wsIEjDoCBO4buZaQ!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s" 
+                src="https://maps.google.com/maps?q=A40%20Khu%20Tập%20thể%20810,%20Vĩnh%20Quỳnh,%20Thanh%20Trì,%20Hà%20Nội&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 

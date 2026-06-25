@@ -5,6 +5,7 @@ interface SectionHeadingProps {
   subtitle?: string;
   alignment?: "left" | "center" | "right";
   className?: string;
+  light?: boolean;
 }
 
 export function SectionHeading({
@@ -12,6 +13,7 @@ export function SectionHeading({
   subtitle,
   alignment = "center",
   className,
+  light = false,
 }: SectionHeadingProps) {
   return (
     <div
@@ -25,15 +27,15 @@ export function SectionHeading({
         className
       )}
     >
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark mb-4">
+      <h2 className={cn("text-3xl md:text-4xl lg:text-5xl font-bold mb-4", light ? "text-white" : "text-brand-dark")}>
         {title}
       </h2>
       {subtitle && (
-        <p className="text-brand-dark/70 max-w-2xl text-lg">
+        <p className={cn("max-w-2xl text-lg", light ? "text-white/80" : "text-brand-dark/70")}>
           {subtitle}
         </p>
       )}
-      <div className="h-1 w-20 bg-brand-gold mt-6 rounded-full" />
+      <div className={cn("h-1 w-20 mt-6 rounded-full", light ? "bg-brand-gold" : "bg-brand-gold")} />
     </div>
   );
 }
