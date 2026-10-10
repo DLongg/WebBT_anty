@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X, Phone, Mail, Search, ArrowRight } from "lucide-react";
 import { Button } from "./ui/Button";
 import { cn } from "@/lib/utils";
 
@@ -13,6 +13,7 @@ const NAV_LINKS = [
   { name: "Dịch vụ", path: "/services" },
   { name: "Dự án", path: "/projects" },
   { name: "Tin tức", path: "/news" },
+  { name: "Tuyển dụng", path: "/news?category=Tuyển dụng" },
   { name: "Liên hệ", path: "/contact" },
 ];
 
@@ -36,9 +37,13 @@ export function Header() {
     setIsMobileMenuOpen(false);
   }, [pathname]);
 
-  const isWhiteHeader = isScrolled || !isHomePage || isMobileMenuOpen;
+  const isProjectsPage = pathname === "/projects";
+  const isTransparentOnProjects = isProjectsPage && !isScrolled && !isMobileMenuOpen;
+  const isWhiteHeader = isScrolled || (!isHomePage && !isTransparentOnProjects) || isMobileMenuOpen;
 
-  const headerBg = isWhiteHeader
+  const headerBg = isTransparentOnProjects
+    ? "bg-transparent text-brand-dark"
+    : isWhiteHeader
     ? "bg-white shadow-md text-brand-dark"
     : "bg-transparent text-white";
 
@@ -52,7 +57,10 @@ export function Header() {
           headerBg
         )}
       >
-        <div className="container mx-auto px-4 md:px-6 h-16 sm:h-20 flex items-center justify-between">
+        <div className={cn(
+          "h-16 sm:h-20 flex items-center justify-between transition-all",
+          isProjectsPage ? "w-full px-4 sm:px-6 lg:px-8 xl:px-10" : "container mx-auto px-4 md:px-6"
+        )}>
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <img
@@ -62,12 +70,12 @@ export function Header() {
             />
             <div className="flex flex-col">
               <span className={cn("font-heading font-extrabold text-sm sm:text-xl tracking-wider leading-none",
-                isWhiteHeader ? "text-brand-gold" : "text-white"
+                (isWhiteHeader || isTransparentOnProjects) ? "text-brand-gold" : "text-white"
               )}>
                 BT DECOM., LTD
               </span>
               <span className={cn("text-[8px] sm:text-[9px] tracking-widest uppercase mt-0.5 sm:mt-1 hidden sm:block",
-                isWhiteHeader ? "text-brand-dark/60" : "text-white/70"
+                (isWhiteHeader || isTransparentOnProjects) ? "text-brand-dark/60" : "text-white/70"
               )}>
                 Chất lượng · Tiến độ · Hiệu quả
               </span>
@@ -79,21 +87,22 @@ export function Header() {
             <ul className="flex items-center gap-5">
               {NAV_LINKS.map((link) => {
                 const isActive = link.path === "/" ? pathname === "/" : pathname.startsWith(link.path);
+                const useDarkLinks = isWhiteHeader || isTransparentOnProjects;
                 return (
                   <li key={link.path}>
                     <Link
                       href={link.path}
                       className={cn(
                         "text-sm font-medium transition-colors relative group",
-                        isWhiteHeader ? "hover:text-brand-gold" : "hover:text-[#4ADE80]",
-                        isActive ? (isWhiteHeader ? "text-brand-gold" : "text-[#4ADE80]") : ""
+                        useDarkLinks ? "hover:text-brand-gold" : "hover:text-[#4ADE80]",
+                        isActive ? (useDarkLinks ? "text-brand-gold" : "text-[#4ADE80]") : ""
                       )}
                     >
                       {link.name}
                       <span
                         className={cn(
                           "absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full",
-                          isWhiteHeader ? "bg-brand-gold" : "bg-[#4ADE80]",
+                          useDarkLinks ? "bg-brand-gold" : "bg-[#4ADE80]",
                           isActive ? "w-full" : ""
                         )}
                       />
@@ -102,9 +111,22 @@ export function Header() {
                 );
               })}
             </ul>
-            <Button asChild>
-              <Link href="/contact">Liên hệ ngay</Link>
-            </Button>
+            <div className="flex items-center gap-2.5">
+              <button 
+                type="button"
+                className="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-600 transition-colors"
+                aria-label="Tìm kiếm"
+              >
+                <Search size={16} />
+              </button>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-1.5 bg-[#15803D] hover:bg-[#166534] text-white px-4 py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-300 shadow-xs"
+              >
+                <span>Liên hệ tư vấn</span>
+                <ArrowRight size={15} />
+              </Link>
+            </div>
           </nav>
 
           {/* Mobile Menu Toggle */}
