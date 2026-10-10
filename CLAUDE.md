@@ -1,1 +1,2 @@
 @AGENTS.md
+@QUY_CHUAN_FRONTEND.md
