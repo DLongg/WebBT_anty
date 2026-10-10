@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "BT DECOM",
     images: [
       {
-        url: "/images/about/about-hero.jpg",
+        url: "/images/about/about-hero-sunset.jpg",
         width: 1200,
         height: 630,
         alt: "Hồ sơ năng lực BT DECOM",

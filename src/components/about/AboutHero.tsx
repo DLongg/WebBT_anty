@@ -11,10 +11,10 @@ export function AboutHero() {
 
   return (
     <section className="relative w-full min-h-[520px] sm:min-h-[560px] lg:min-h-[600px] pt-28 sm:pt-32 lg:pt-36 pb-20 sm:pb-24 bg-[#0A1624] text-white overflow-hidden flex items-center">
-      {/* Background Image: Image 1 sunset panoramic construction photo with engineers on right */}
+      {/* Background Image: High-resolution sunset panoramic construction site */}
       <div 
         className="absolute inset-0 bg-cover bg-no-repeat bg-[center_top] lg:bg-[right_center]"
-        style={{ backgroundImage: `url('/images/about/about-hero-sunset-composite.jpg')` }}
+        style={{ backgroundImage: `url('/images/about/about-hero-sunset.jpg')` }}
       />
 
       {/* Dark gradient overlay on the left: text is crisp and readable while sunset shines on the right */}
