@@ -57,10 +57,7 @@ export function Header() {
           headerBg
         )}
       >
-        <div className={cn(
-          "h-16 sm:h-20 flex items-center justify-between transition-all",
-          isProjectsPage ? "w-full px-4 sm:px-6 lg:px-8 xl:px-10" : "container mx-auto px-4 md:px-6"
-        )}>
+        <div className="container mx-auto px-4 md:px-6 h-16 sm:h-20 flex items-center justify-between transition-all">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <img

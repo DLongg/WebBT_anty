@@ -86,7 +86,7 @@ export function ProjectsClient({ projects, projectCategories }: ProjectsClientPr
           HERO TEXT & STATS HEADER (Over background image)
       ══════════════════════════════════════════════════════════════════ */}
       <section className="relative z-10 pt-24 sm:pt-28 lg:pt-32 pb-6 sm:pb-8">
-        <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10">
+        <div className="container mx-auto px-4 md:px-6">
           
           {/* Top text content & stats */}
           <div className="max-w-2xl">
@@ -144,7 +144,7 @@ export function ProjectsClient({ projects, projectCategories }: ProjectsClientPr
           SHOWCASE CARDS & PROJECT LIST (Sliding up and covering the background)
       ══════════════════════════════════════════════════════════════════ */}
       <section className="relative z-20 bg-[#F0F7F4] pt-2 sm:pt-3 pb-16">
-        <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10">
+        <div className="container mx-auto px-4 md:px-6">
 
           {/* 4 Showcase Cards Grid (Matching Image 1 exact layout) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-4.5 lg:gap-5 mb-12 sm:mb-16">
