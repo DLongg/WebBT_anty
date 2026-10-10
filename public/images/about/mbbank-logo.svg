@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <!-- MB Bank Star Dynamic Ribbon -->
+  <g transform="translate(10, 10)">
+    <path d="M12 4L16 14L26 14L18 20L21 30L12 24L3 30L6 20L-2 14L8 14Z" fill="#1400FF" opacity="0.9"/>
+    <path d="M24 10L32 10L28 26L20 26Z" fill="#E60000"/>
+    <path d="M28 6L36 6L32 22L24 22Z" fill="#1400FF"/>
+  </g>
+  <!-- MB Bank Text -->
+  <text x="56" y="38" font-family="'Montserrat', sans-serif" font-size="30" font-weight="900" fill="#1400FF" letter-spacing="-1">MB</text>
+  <text x="110" y="38" font-family="'Montserrat', sans-serif" font-size="16" font-weight="700" fill="#E60000" letter-spacing="1">BANK</text>
+</svg>
