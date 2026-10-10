@@ -67,25 +67,38 @@ export function ProjectsClient({ projects, projectCategories }: ProjectsClientPr
       {/* ══════════════════════════════════════════════════════════════════
           HERO & SHOWCASE SECTION (EXACT REPLICA OF IMAGE 1 WITH IMAGE 2 BGR)
       ══════════════════════════════════════════════════════════════════ */}
-      {/* Background Image (Image 2) fixed in top half */}
-      <div className="fixed top-0 left-0 right-0 h-[480px] sm:h-[530px] lg:h-[580px] pointer-events-none z-0 overflow-hidden">
+      {/* Background Image (Image 2) fixed in top half with soft blur & fade transition */}
+      <div className="fixed top-0 left-0 right-0 h-[560px] sm:h-[640px] lg:h-[720px] pointer-events-none z-0 overflow-hidden">
         <img 
           src="/images/projects-bg.jpg" 
           alt="BT DECOM Modern Architecture"
           className="w-full h-full object-cover object-[center_top] lg:object-[right_top]"
+          style={{
+            maskImage: "linear-gradient(to bottom, black 45%, rgba(0,0,0,0.85) 65%, rgba(0,0,0,0.3) 85%, transparent 100%)",
+            WebkitMaskImage: "linear-gradient(to bottom, black 45%, rgba(0,0,0,0.85) 65%, rgba(0,0,0,0.3) 85%, transparent 100%)",
+          }}
         />
 
         {/* Soft translucent gradient on left: ensures trees & skyline show through while text is readable */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#F0F7F4]/80 via-[#F0F7F4]/40 via-[46%] to-transparent pointer-events-none" />
 
-        {/* Bottom fade: softly dissolves bottom foot of background into #F0F7F4 */}
-        <div className="absolute inset-x-0 bottom-0 h-36 sm:h-48 bg-gradient-to-b from-transparent via-[#F0F7F4]/70 to-[#F0F7F4] pointer-events-none" />
+        {/* Multi-stop bottom fade: softly dissolves bottom foot of background into #F0F7F4 */}
+        <div className="absolute inset-x-0 bottom-0 h-56 sm:h-72 lg:h-96 bg-gradient-to-b from-transparent via-[#F0F7F4]/40 via-[35%] via-[#F0F7F4]/80 via-[70%] to-[#F0F7F4] pointer-events-none" />
+
+        {/* Bottom blur transition: softly blurs the dissolving edge into the page */}
+        <div 
+          className="absolute inset-x-0 bottom-0 h-40 sm:h-56 lg:h-72 backdrop-blur-[3px] pointer-events-none"
+          style={{
+            maskImage: "linear-gradient(to bottom, transparent 0%, black 60%, black 100%)",
+            WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 60%, black 100%)",
+          }}
+        />
       </div>
 
       {/* ══════════════════════════════════════════════════════════════════
           HERO TEXT & STATS HEADER (Over background image)
       ══════════════════════════════════════════════════════════════════ */}
-      <section className="relative z-10 pt-24 sm:pt-28 lg:pt-32 pb-6 sm:pb-8">
+      <section className="relative z-10 pt-24 sm:pt-28 lg:pt-32 pb-8 sm:pb-10 lg:pb-12">
         <div className="container mx-auto px-4 md:px-6">
           
           {/* Top text content & stats */}
@@ -143,7 +156,15 @@ export function ProjectsClient({ projects, projectCategories }: ProjectsClientPr
       {/* ══════════════════════════════════════════════════════════════════
           SHOWCASE CARDS & PROJECT LIST (Sliding up and covering the background)
       ══════════════════════════════════════════════════════════════════ */}
-      <section className="relative z-20 bg-[#F0F7F4] pt-2 sm:pt-3 pb-16">
+      <section className="relative z-20 pt-2 sm:pt-3 pb-16">
+        {/* Soft background fade: transparent at top so background image softly shows, dissolving smoothly into #F0F7F4 */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#F0F7F4]/80 via-[140px] to-[#F0F7F4] -z-10 pointer-events-none" />
+        
+        {/* Soft blur transition edge extending slightly above the cards */}
+        <div 
+          className="absolute -top-12 sm:-top-16 inset-x-0 h-12 sm:h-16 bg-gradient-to-t from-[#F0F7F4]/60 to-transparent pointer-events-none -z-10"
+        />
+
         <div className="container mx-auto px-4 md:px-6">
 
           {/* 4 Showcase Cards Grid (Matching Image 1 exact layout) */}
