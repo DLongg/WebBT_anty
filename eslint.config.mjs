@@ -12,7 +12,13 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    "tmp/**",
   ]),
+  {
+    // Existing one-off content conversion scripts use CommonJS in this project.
+    files: ["generate_actual_projects.js", "src/convert_projects.js", "src/fix_md.js"],
+    rules: { "@typescript-eslint/no-require-imports": "off" },
+  },
 ]);
 
 export default eslintConfig;

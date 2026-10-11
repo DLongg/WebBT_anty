@@ -6,9 +6,9 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CTASection } from "@/sections/CTASection";
 import { services } from "@/data/services";
 import Link from "next/link";
-import { ArrowRight, PenTool, Map, Compass, HardHat, ClipboardCheck, Eye, Zap, Flame } from "lucide-react";
+import { ArrowRight, PenTool, Map, Compass, HardHat, ClipboardCheck, Eye, Zap, Flame, type LucideIcon } from "lucide-react";
 
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, LucideIcon> = {
   PenTool, Map, Compass, HardHat, ClipboardCheck, Eye, Zap, Flame,
 };
 
