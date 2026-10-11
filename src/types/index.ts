@@ -29,6 +29,9 @@ export interface Project {
 
 // ===== News Article =====
 export interface NewsArticle {
+  /** Optional publication metadata. */
+  status?: "draft" | "published";
+  publishedAt?: string;
   id: string;
   slug: string;
   title: string;

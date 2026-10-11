@@ -18,7 +18,7 @@ export function PartnerSection() {
   const duplicatedPartners = [...mainPartners, ...mainPartners, ...mainPartners];
 
   return (
-    <section className="py-16 md:py-20 bg-white border-y border-gray-100 overflow-hidden" ref={ref as any}>
+    <section className="py-16 md:py-20 bg-white border-y border-gray-100 overflow-hidden" ref={ref}>
       <motion.div 
         className="container mx-auto px-4 md:px-6 mb-10 text-center"
         initial={{ opacity: 0, y: 30 }}

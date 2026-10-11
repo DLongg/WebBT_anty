@@ -1,5 +1,7 @@
 import type { NewsArticle } from "@/types";
 
+// Existing draft/demo content remains available on its original routes.
+// Set status="published" and an ISO publishedAt only after editorial review.
 export const news: NewsArticle[] = [
   // --- 5 Top Featured Mockup Articles ---
   {

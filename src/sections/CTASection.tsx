@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { contact } from "@/data/contact";
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { ArrowRight, Phone } from "lucide-react";
@@ -9,12 +10,12 @@ export function CTASection() {
   const { ref, isInView } = useScrollAnimation();
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 relative overflow-hidden bg-brand-dark" ref={ref}>
+    <section aria-labelledby="contact-heading" className="py-12 sm:py-16 md:py-20 relative overflow-hidden bg-brand-dark" ref={ref}>
       {/* Background image with overlay */}
       <div
         className="absolute inset-0 opacity-20"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1541888086425-d81bb19240f5?w=1920&q=80")',
+          backgroundImage: 'url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80")',
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -33,7 +34,7 @@ export function CTASection() {
         <div className="max-w-3xl mx-auto text-center">
 
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-white mb-6 sm:mb-10 leading-tight">
+          <h2 id="contact-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-white mb-6 sm:mb-10 leading-tight">
             Bạn cần đơn vị thi công<br className="hidden md:block" /> xây lắp chuyên nghiệp?
           </h2>
 
@@ -42,11 +43,12 @@ export function CTASection() {
               href="/contact"
               className="group inline-flex items-center gap-2 sm:gap-3 bg-brand-gold hover:bg-brand-gold-light text-white px-6 py-3.5 sm:px-10 sm:py-5 rounded-xl font-semibold text-sm sm:text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-gold/30"
             >
-              Liên hệ tư vấn miễn phí
+              Liên hệ tư vấn
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-              href="tel:+84XXXXXXXXX"
+              href={contact.phoneHref}
+              aria-label={`Hoặc gọi trực tiếp: ${contact.phone}`}
               className="inline-flex items-center gap-3 text-white/70 hover:text-white px-6 py-4 font-medium transition-colors"
             >
               <Phone size={18} />

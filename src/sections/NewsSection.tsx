@@ -3,8 +3,9 @@
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { news } from "@/data/news";
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Calendar, Clock } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
 
 export function NewsSection() {
   const { ref, isInView } = useScrollAnimation();
@@ -23,12 +24,12 @@ export function NewsSection() {
   };
 
   return (
-    <section className="py-16 md:py-24 lg:py-32 bg-brand-light" ref={ref}>
+    <section aria-labelledby="news-heading" className="py-16 md:py-24 lg:py-32 bg-brand-light" ref={ref}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-14 gap-4 md:gap-6">
           <div>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-brand-dark mb-3 sm:mb-4">
+            <h2 id="news-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-brand-dark mb-3 sm:mb-4">
               Tin Tức & Sự Kiện
             </h2>
             <p className="text-gray-500 text-sm sm:text-lg max-w-xl">
@@ -56,7 +57,9 @@ export function NewsSection() {
               <Link href={`/news/${item.slug}`} className="block h-full">
                 <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-row sm:flex-col h-full border border-gray-100">
                   <div className="relative w-[120px] sm:w-full shrink-0 aspect-[3/4] sm:aspect-[16/10] overflow-hidden">
-                    <img
+                    <Image
+                      fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 120px"
                       src={item.image}
                       alt={item.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
