@@ -1,8 +1,8 @@
-import { getAllProjects, projectCategories } from "@/lib/projects";
+import { getAllProjects } from "@/lib/projects";
+import { selectFeaturedProjects, type FeaturedProject } from "@/data/homepage";
 import { ProjectsSectionClient } from "./ProjectsSectionClient";
 
-export function ProjectsSection() {
-  const projects = getAllProjects();
-
-  return <ProjectsSectionClient projects={projects} projectCategories={projectCategories} />;
+export function ProjectsSection({ projects }: { projects?: FeaturedProject[] }) {
+  const featured = projects ?? selectFeaturedProjects(getAllProjects());
+  return <ProjectsSectionClient projects={featured} />;
 }

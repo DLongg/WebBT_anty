@@ -1,108 +1,36 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
+
+const strengths = [
+  { title: "Đội ngũ chuyên môn", description: "Kỹ sư hệ thống điện, tự động hóa, cơ khí và công nhân kỹ thuật theo hồ sơ nhân sự." },
+  { title: "Tổ chức thi công", description: "Các đội xây lắp cùng thiết bị vận tải, thi công và thí nghiệm điện phục vụ từng hạng mục." },
+  { title: "Kinh nghiệm công trình", description: "Hồ sơ thi công chiếu sáng cầu vượt, tuyến cáp trung thế và hệ thống cơ điện tại Hà Nội." },
+];
 
 export function AboutSection() {
-  const { ref, isInView } = useScrollAnimation();
-
-  const highlights = [
-    "Doanh nghiệp uy tín trên thị trường miền Bắc",
-    "Chuyên môn sâu về xây lắp điện và cơ điện tòa nhà",
-    "Cam kết Chất lượng - Tiến độ - Hiệu quả"
-  ];
-
   return (
-    <section className="py-16 md:py-24 lg:py-32 bg-white overflow-hidden" ref={ref}>
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-24 items-center">
-
-          {/* Image Side - Stacked composition */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative"
-          >
-            <div className="relative">
-              {/* Main image */}
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
-                  alt="BT DECOM - Giới thiệu"
-                  className="w-full aspect-[4/3] sm:aspect-[4/5] object-cover"
-                />
-                {/* Subtle overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/30 to-transparent" />
-              </div>
-
-              {/* Experience badge */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 md:bottom-8 md:-right-8 bg-brand-gold text-white p-4 sm:p-6 rounded-xl sm:rounded-2xl shadow-2xl shadow-brand-gold/30 z-20"
-              >
-                <div className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl leading-none">13+</div>
-                <div className="text-xs sm:text-sm text-white/90 mt-1 font-medium">Năm kinh nghiệm</div>
-              </motion.div>
-
-              {/* Decorative frame */}
-              <div className="absolute -top-4 -left-4 w-32 h-32 border-t-4 border-l-4 border-brand-gold/30 rounded-tl-3xl -z-10" />
-              <div className="absolute -bottom-4 -right-4 w-32 h-32 border-b-4 border-r-4 border-brand-gold/30 rounded-br-3xl -z-10" />
-            </div>
-          </motion.div>
-
-          {/* Content Side */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 40 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          >
-
-
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold font-heading text-brand-dark mb-4 sm:mb-6 leading-tight">
-              Công ty TNHH Xây lắp và Phát triển Thương mại{" "}
-              <span className="text-brand-gold">BT</span>
-            </h2>
-
-            <div className="space-y-3 sm:space-y-4 text-gray-600 mb-6 sm:mb-8 text-sm sm:text-[17px] leading-relaxed">
-              <p>
-                <strong className="text-brand-dark">BT DECOM., LTD</strong> được thành lập từ năm 2012. Trải qua nhiều năm hình thành và phát triển, chúng tôi đã từng bước khẳng định vị thế và uy tín, trở thành đối tác tin cậy của nhiều khách hàng trên cả nước.
-              </p>
-              <p>
-                Với phương châm lấy <strong className="text-brand-dark">chất lượng, uy tín và sự hài lòng của khách hàng</strong> làm nền tảng, BT DECOM không ngừng nâng cao năng lực để mang đến những công trình bền vững, an toàn và có giá trị lâu dài.
-              </p>
-            </div>
-
-            {/* Highlights */}
-            <div className="space-y-3 mb-10">
-              {highlights.map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-                  transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                  className="flex items-center gap-3"
-                >
-                  <div className="w-6 h-6 rounded-full bg-brand-gold/10 flex items-center justify-center shrink-0">
-                    <CheckCircle2 className="text-brand-gold" size={14} />
-                  </div>
-                  <span className="text-brand-dark font-medium">{item}</span>
-                </motion.div>
-              ))}
-            </div>
-
-            <Link
-              href="/about"
-              className="group inline-flex items-center gap-3 bg-brand-dark hover:bg-brand-gold text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-            >
-              Khám Phá Hồ Sơ Năng Lực
-              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </motion.div>
+    <section className="home-section bg-white" aria-labelledby="about-heading">
+      <div className="site-container grid gap-10 items-center lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+        <figure className="relative overflow-hidden rounded-xl">
+          <div className="relative aspect-[4/3] lg:aspect-[4/5]">
+            <Image src="/images/home/thi-cong-co-dien.webp" alt="Lắp đặt đường ống cơ điện bên trong công trình đang thi công" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
+          </div>
+          <figcaption className="absolute inset-x-0 bottom-0 bg-brand-dark/90 px-5 py-4 text-white text-sm">Hệ thống cơ điện trong quá trình thi công</figcaption>
+        </figure>
+        <div>
+          <p className="text-brand-primary font-medium text-sm mb-4">BT DECOM · Thành lập năm 2012</p>
+          <h2 id="about-heading" className="home-heading">Năng lực triển khai từng hạng mục</h2>
+          <p className="mt-5 text-gray-600 leading-relaxed max-w-xl">Công ty TNHH Xây lắp và Phát triển Thương mại BT hoạt động trong lĩnh vực xây lắp điện, cơ điện và hạ tầng kỹ thuật. Chúng tôi phối hợp đội ngũ chuyên môn, tổ chức thi công và trang thiết bị để triển khai các hạng mục từ khảo sát đến bàn giao. Hồ sơ năng lực giới thiệu thông tin doanh nghiệp, nhân sự, thiết bị và các công trình đã thực hiện.</p>
+          <ul className="mt-7 space-y-5">
+            {strengths.map(item => (
+              <li key={item.title} className="flex items-start gap-3">
+                <Check size={20} className="mt-1 shrink-0 text-brand-primary" aria-hidden="true" />
+                <div><h3 className="text-base font-semibold">{item.title}</h3><p className="mt-1 text-sm leading-relaxed text-gray-600 max-w-lg">{item.description}</p></div>
+              </li>
+            ))}
+          </ul>
+          <Link href="/about" className="text-link mt-7">Xem hồ sơ năng lực <ArrowRight size={18} aria-hidden="true" /></Link>
         </div>
       </div>
     </section>

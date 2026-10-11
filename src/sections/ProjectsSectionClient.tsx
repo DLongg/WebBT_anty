@@ -1,133 +1,37 @@
-"use client";
-
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import type { Project } from "@/types";
+import Image from "next/image";
 import Link from "next/link";
-import { MapPin, ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
+import type { FeaturedProject } from "@/data/homepage";
 
-interface ProjectsSectionClientProps {
-  projects: Project[];
-  projectCategories: { value: string; label: string }[];
-}
-
-export function ProjectsSectionClient({ projects, projectCategories }: ProjectsSectionClientProps) {
-  const { ref, isInView } = useScrollAnimation();
-  const [activeCategory, setActiveCategory] = useState("all");
-
-  const filteredProjects = activeCategory === "all" 
-    ? projects.slice(0, 6) 
-    : projects.filter(p => p.category === activeCategory).slice(0, 6);
-
+export function ProjectsSectionClient({ projects }: { projects: FeaturedProject[] }) {
+  if (projects.length === 0) return null;
   return (
-    <section className="py-16 md:py-24 lg:py-32 bg-brand-light" ref={ref}>
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-14 gap-4 md:gap-6">
+    <section className="home-section bg-brand-light" aria-labelledby="projects-heading">
+      <div className="site-container">
+        <div className="flex flex-col gap-5 justify-between md:flex-row md:items-end mb-8 md:mb-10">
           <div>
-
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-brand-dark mb-3 sm:mb-4">
-              Dự Án Tiêu Biểu
-            </h2>
-            <p className="text-gray-500 text-sm sm:text-lg max-w-xl">
-              Những dự án xuất sắc minh chứng cho năng lực và sự chuyên nghiệp của BT DECOM.
-            </p>
+            <h2 id="projects-heading" className="home-heading">Công trình tiêu biểu</h2>
+            <p className="mt-4 max-w-xl leading-relaxed text-gray-600">Một số hạng mục chiếu sáng, cấp nguồn và cơ điện trong hồ sơ công trình của BT DECOM.</p>
           </div>
-          <Link
-            href="/projects"
-            className="hidden md:inline-flex items-center gap-2 text-brand-gold font-semibold hover:text-brand-dark transition-colors shrink-0 group"
-          >
-            Xem tất cả dự án
-            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-          </Link>
+          <Link href="/projects" className="text-link self-start md:self-auto shrink-0">Xem tất cả dự án <ArrowRight size={18} aria-hidden="true" /></Link>
         </div>
-
-
-        {/* Filter Tabs */}
-        <div className="flex flex-wrap gap-2 md:gap-4 mb-6 sm:mb-10">
-          {projectCategories.map((category) => (
-            <button
-              key={category.value}
-              onClick={() => setActiveCategory(category.value)}
-              className={`px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 ${
-                activeCategory === category.value
-                  ? "bg-brand-gold text-white shadow-md"
-                  : "bg-white text-gray-600 hover:bg-gray-50 border border-gray-200"
-              }`}
-            >
-              {category.label}
-            </button>
+        <div className="grid gap-8 lg:grid-cols-[1.25fr_1fr] lg:gap-10">
+          {projects.map((project, index) => (
+            <article key={project.slug} className={index === 0 ? "lg:row-span-2" : ""}>
+              <Link href={`/projects/${project.slug}`} className={`group grid gap-4 ${index === 0 ? "" : "sm:grid-cols-[0.85fr_1fr] sm:items-center"}`}>
+                <div className={`relative overflow-hidden rounded-lg ${index === 0 ? "aspect-[4/3] lg:aspect-[5/4]" : "aspect-[16/10] sm:aspect-[4/3]"}`}>
+                  <Image src={project.image} alt={project.imageAlt} fill sizes={index === 0 ? "(min-width: 1024px) 52vw, 100vw" : "(min-width: 1024px) 24vw, (min-width: 640px) 40vw, 100vw"} className="object-cover transition-transform duration-300 group-hover:scale-[1.03]" />
+                </div>
+                <div>
+                  <p className="text-sm text-brand-primary font-medium">{project.categoryLabel}</p>
+                  <h3 className={`mt-2 font-heading font-semibold tracking-tight text-brand-dark group-hover:text-brand-primary transition-colors ${index === 0 ? "text-xl md:text-2xl" : "text-lg md:text-xl"}`}>{project.displayName}</h3>
+                  <p className="mt-2 text-sm text-gray-600 leading-relaxed">{project.location}</p>
+                  {index === 0 && <p className="mt-3 text-gray-600 leading-relaxed max-w-xl">{project.shortDescription}</p>}
+                  <span className="mt-3 inline-flex min-h-11 items-center gap-2 text-brand-primary text-sm font-semibold">Xem công trình <ArrowUpRight size={16} aria-hidden="true" /></span>
+                </div>
+              </Link>
+            </article>
           ))}
-        </div>
-
-        {/* Projects Grid */}
-        <motion.div 
-          layout
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8"
-        >
-          <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project) => (
-              <motion.div
-                layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.4 }}
-                key={project.id}
-                className="group cursor-pointer h-full"
-              >
-                <Link href={`/projects/${project.slug}`} className="block h-full">
-                  <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-gray-100">
-                    {/* Image */}
-                    <div className="relative aspect-[4/3] overflow-hidden">
-                      <img 
-                        src={project.image} 
-                        alt={project.name} 
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 transition-opacity duration-300" />
-                      
-                      {/* Category Badge */}
-                      <div className="absolute top-4 left-4 bg-brand-gold text-white text-xs font-bold px-3 py-1 rounded-sm uppercase tracking-wider">
-                        {project.categoryLabel}
-                      </div>
-                    </div>
-                    
-                    {/* Content */}
-                    <div className="p-6 flex flex-col flex-grow relative">
-                      {/* View details button that slides up on hover */}
-                      <div className="absolute right-6 -top-6 w-12 h-12 bg-white rounded-full flex items-center justify-center text-brand-gold shadow-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 z-10">
-                        <ArrowRight size={20} />
-                      </div>
-
-                      <h3 className="text-xl font-bold font-heading text-brand-dark mb-2 group-hover:text-brand-gold transition-colors line-clamp-1">
-                        {project.name}
-                      </h3>
-                      
-                      <div className="flex items-center gap-1.5 text-gray-500 text-sm mb-4">
-                        <MapPin size={16} className="text-brand-gold" />
-                        <span className="line-clamp-1">{project.location}</span>
-                      </div>
-                      
-                      <p className="text-gray-600 text-sm line-clamp-2 mt-auto">
-                        {project.shortDescription}
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
-
-        <div className="mt-10 text-center md:hidden">
-          <Link 
-            href="/projects" 
-            className="inline-flex items-center gap-2 text-brand-gold font-medium"
-          >
-            Xem tất cả dự án
-            <ArrowRight size={20} />
-          </Link>
         </div>
       </div>
     </section>
