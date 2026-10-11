@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
@@ -35,7 +35,7 @@ export function HeroSection({ projects = [] }: HeroSectionProps) {
   };
 
   return (
-    <section className="relative h-[calc(100vh/0.9)] w-full flex items-center overflow-clip">
+    <section aria-labelledby="hero-heading" className="relative min-h-[640px] h-svh w-full flex items-center overflow-clip">
       {/* Background Video/Image */}
       <div className="absolute inset-0 z-0 overflow-hidden bg-brand-dark">
         <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/95 via-brand-dark/70 to-brand-dark/30 z-10" />
@@ -51,7 +51,7 @@ export function HeroSection({ projects = [] }: HeroSectionProps) {
       </div>
 
       {/* Content */}
-      <div className="container relative z-20 mx-auto px-4 md:px-6 pt-32 sm:pt-32 pb-12 sm:pb-20 h-full flex flex-col justify-end sm:justify-center">
+      <div className="relative z-20 mx-auto w-full max-w-[1250px] px-4 md:px-6 pt-32 sm:pt-32 pb-12 sm:pb-20 h-full flex flex-col justify-end sm:justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pb-32 sm:pb-0 mt-16 sm:mt-0">
           {/* Left - Main Content */}
           <div className="lg:col-span-7 text-left">
@@ -60,7 +60,7 @@ export function HeroSection({ projects = [] }: HeroSectionProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="font-heading text-[32px] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[80px] text-white font-bold leading-[1.2] mb-4">
+              <h1 id="hero-heading" className="font-heading text-[32px] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[80px] text-white font-bold leading-[1.2] mb-4">
                 Chúng tôi sống <br />
                 vì <span className="text-[#4ade80]">thử thách</span>
               </h1>
@@ -100,7 +100,7 @@ export function HeroSection({ projects = [] }: HeroSectionProps) {
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="w-full max-w-[420px] relative mt-10 lg:mt-0"
+                className="w-full max-w-[420px] relative mt-10 lg:mt-0 lg:mr-12 xl:mr-0"
               >
                 {/* External Nav Controls */}
                 <button
@@ -114,7 +114,7 @@ export function HeroSection({ projects = [] }: HeroSectionProps) {
                   <ChevronLeft size={60} strokeWidth={1} />
                 </button>
                 <button
-                  className="absolute -right-12 lg:-right-20 top-1/2 -translate-y-1/2 text-white/50 hover:text-white transition-colors z-0"
+                  className="absolute -right-12 top-1/2 -translate-y-1/2 text-white/50 hover:text-white transition-colors z-0"
                   onClick={(e) => {
                     e.stopPropagation();
                     nextSlide();
@@ -163,7 +163,10 @@ export function HeroSection({ projects = [] }: HeroSectionProps) {
                     {/* Pager */}
                     <div className="flex items-center gap-2 pb-3 pl-1">
                       {slides.map((_, index) => (
-                        <div
+                        <button
+                          type="button"
+                          aria-label={`Xem dự án ${index + 1}`}
+                          aria-pressed={index === currentSlide}
                           key={index}
                           onClick={() => setCurrentSlide(index)}
                           className={cn(
@@ -179,7 +182,7 @@ export function HeroSection({ projects = [] }: HeroSectionProps) {
                               className="absolute top-0 bottom-0 left-0 bg-[#4ade80] rounded-full"
                             />
                           )}
-                        </div>
+                        </button>
                       ))}
                     </div>
 
@@ -197,7 +200,7 @@ export function HeroSection({ projects = [] }: HeroSectionProps) {
               </motion.div>
             ) : (
               <div className="bg-white/10 backdrop-blur text-white p-8 rounded-lg border border-white/20">
-                Không tìm thấy dự án nào. (Vui lòng kiểm tra lại thư mục src/content/projects)
+                Thông tin dự án đang được cập nhật.
               </div>
             )}
           </div>
