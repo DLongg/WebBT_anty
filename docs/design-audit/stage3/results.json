@@ -1,0 +1,39 @@
+{
+  "phase": "stage3",
+  "staticMode": false,
+  "checks": [
+    {
+      "name": "Hero actions visible 390",
+      "pass": true
+    },
+    {
+      "name": "Three curated projects 390",
+      "pass": true
+    },
+    {
+      "name": "Projects follow services 390",
+      "pass": true
+    },
+    {
+      "name": "No horizontal overflow 390",
+      "pass": true
+    },
+    {
+      "name": "Hero actions visible 1440",
+      "pass": true
+    },
+    {
+      "name": "Three curated projects 1440",
+      "pass": true
+    },
+    {
+      "name": "Projects follow services 1440",
+      "pass": true
+    },
+    {
+      "name": "No horizontal overflow 1440",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

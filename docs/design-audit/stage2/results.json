@@ -1,0 +1,27 @@
+{
+  "phase": "stage2",
+  "staticMode": false,
+  "checks": [
+    {
+      "name": "Contact has no simulated form",
+      "pass": true
+    },
+    {
+      "name": "Contact uses real phone",
+      "pass": true
+    },
+    {
+      "name": "Menu expanded and scroll locked",
+      "pass": true
+    },
+    {
+      "name": "Escape restores focus",
+      "pass": true
+    },
+    {
+      "name": "Zoom removed",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

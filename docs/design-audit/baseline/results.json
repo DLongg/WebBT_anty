@@ -1,0 +1,160 @@
+{
+  "phase": "baseline",
+  "staticMode": true,
+  "checks": [],
+  "errors": [],
+  "width1440": {
+    "width": 1440,
+    "height": 900,
+    "pageHeight": 9230,
+    "scrollWidth": 1433,
+    "heading": "Chúng tôi sống\nvì thử thách",
+    "sections": [
+      {
+        "heading": "Chúng tôi sống\nvì thử thách",
+        "top": 0,
+        "height": 900
+      },
+      {
+        "heading": "Công ty TNHH Xây lắp và Phát triển Thương mại BT",
+        "top": 900,
+        "height": 869
+      },
+      {
+        "heading": "Giá Trị Cốt Lõi",
+        "top": 1769,
+        "height": 654
+      },
+      {
+        "heading": "Dịch Vụ Nổi Bật",
+        "top": 2423,
+        "height": 957
+      },
+      {
+        "heading": "Sự khác biệt mang tên BT DECOM",
+        "top": 3380,
+        "height": 823
+      },
+      {
+        "top": 4203,
+        "height": 451
+      },
+      {
+        "heading": "Quy Trình Làm Việc",
+        "top": 4654,
+        "height": 682
+      },
+      {
+        "heading": "Dự Án Tiêu Biểu",
+        "top": 5336,
+        "height": 1306
+      },
+      {
+        "heading": "Tin Tức & Sự Kiện",
+        "top": 6642,
+        "height": 850
+      },
+      {
+        "heading": "Khách Hàng Nói Gì",
+        "top": 7492,
+        "height": 723
+      },
+      {
+        "heading": "KHÁCH HÀNG & ĐỐI TÁC CHIẾN LƯỢC TIÊU BIỂU",
+        "top": 8215,
+        "height": 222
+      },
+      {
+        "heading": "Bạn cần đơn vị thi công\nxây lắp chuyên nghiệp?",
+        "top": 8437,
+        "height": 349
+      }
+    ],
+    "video": 1,
+    "deadLinks": 3,
+    "brokenImages": [],
+    "performance": {
+      "lcpMs": 1888,
+      "domContentLoadedMs": 94.5,
+      "resourceBytes": 21948035,
+      "videoRequests": []
+    }
+  },
+  "width390": {
+    "width": 390,
+    "height": 844,
+    "pageHeight": 11944,
+    "scrollWidth": 383,
+    "heading": "Chúng tôi sống\nvì thử thách",
+    "sections": [
+      {
+        "heading": "Chúng tôi sống\nvì thử thách",
+        "top": 0,
+        "height": 844
+      },
+      {
+        "heading": "Công ty TNHH Xây lắp và Phát triển Thương mại BT",
+        "top": 844,
+        "height": 865
+      },
+      {
+        "heading": "Giá Trị Cốt Lõi",
+        "top": 1709,
+        "height": 659
+      },
+      {
+        "heading": "Dịch Vụ Nổi Bật",
+        "top": 2368,
+        "height": 1183
+      },
+      {
+        "heading": "Sự khác biệt mang tên BT DECOM",
+        "top": 3551,
+        "height": 1102
+      },
+      {
+        "top": 4653,
+        "height": 443
+      },
+      {
+        "heading": "Quy Trình Làm Việc",
+        "top": 5095,
+        "height": 1018
+      },
+      {
+        "heading": "Dự Án Tiêu Biểu",
+        "top": 6113,
+        "height": 2938
+      },
+      {
+        "heading": "Tin Tức & Sự Kiện",
+        "top": 9051,
+        "height": 744
+      },
+      {
+        "heading": "Khách Hàng Nói Gì",
+        "top": 9795,
+        "height": 541
+      },
+      {
+        "heading": "KHÁCH HÀNG & ĐỐI TÁC CHIẾN LƯỢC TIÊU BIỂU",
+        "top": 10336,
+        "height": 212
+      },
+      {
+        "heading": "Bạn cần đơn vị thi công xây lắp chuyên nghiệp?",
+        "top": 10548,
+        "height": 270
+      }
+    ],
+    "video": 1,
+    "deadLinks": 3,
+    "brokenImages": [],
+    "performance": {
+      "lcpMs": 1688,
+      "domContentLoadedMs": 105.09999999962747,
+      "resourceBytes": 17012389,
+      "videoRequests": []
+    }
+  }
+}

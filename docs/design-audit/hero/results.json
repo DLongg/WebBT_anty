@@ -1,0 +1,188 @@
+{
+  "phase": "hero",
+  "staticMode": true,
+  "checks": [],
+  "errors": [],
+  "width390": {
+    "viewport": 390,
+    "scrollWidth": 382,
+    "contentWidth": 382,
+    "gridWidth": 350,
+    "headingFirstLineRects": [
+      {
+        "left": 16,
+        "right": 272.59375,
+        "top": 379.21875
+      }
+    ],
+    "headingColumnRight": 366,
+    "controls": [
+      {
+        "label": "Trang trước",
+        "left": 0,
+        "right": 0
+      },
+      {
+        "label": "Trang sau",
+        "left": 0,
+        "right": 0
+      }
+    ]
+  },
+  "width1024": {
+    "viewport": 1024,
+    "scrollWidth": 1016,
+    "contentWidth": 1016,
+    "gridWidth": 968,
+    "headingFirstLineRects": [
+      {
+        "left": 24,
+        "right": 505.09375,
+        "top": 228
+      }
+    ],
+    "headingColumnRight": 568.65625,
+    "controls": [
+      {
+        "label": "Trang trước",
+        "left": 536.65625,
+        "right": 596.65625
+      },
+      {
+        "label": "Trang sau",
+        "left": 932,
+        "right": 992
+      }
+    ]
+  },
+  "width1280": {
+    "viewport": 1280,
+    "scrollWidth": 1272,
+    "contentWidth": 1250,
+    "gridWidth": 1202,
+    "headingFirstLineRects": [
+      {
+        "left": 35,
+        "right": 676.453125,
+        "top": 220.25
+      }
+    ],
+    "headingColumnRight": 716.15625,
+    "controls": [
+      {
+        "label": "Trang trước",
+        "left": 737,
+        "right": 797
+      },
+      {
+        "label": "Trang sau",
+        "left": 1225,
+        "right": 1285
+      }
+    ]
+  },
+  "width1366": {
+    "viewport": 1366,
+    "scrollWidth": 1358,
+    "contentWidth": 1250,
+    "gridWidth": 1202,
+    "headingFirstLineRects": [
+      {
+        "left": 78,
+        "right": 719.453125,
+        "top": 220.25
+      }
+    ],
+    "headingColumnRight": 759.15625,
+    "controls": [
+      {
+        "label": "Trang trước",
+        "left": 780,
+        "right": 840
+      },
+      {
+        "label": "Trang sau",
+        "left": 1268,
+        "right": 1328
+      }
+    ]
+  },
+  "width1440": {
+    "viewport": 1440,
+    "scrollWidth": 1432,
+    "contentWidth": 1250,
+    "gridWidth": 1202,
+    "headingFirstLineRects": [
+      {
+        "left": 115,
+        "right": 756.453125,
+        "top": 286.25
+      }
+    ],
+    "headingColumnRight": 796.15625,
+    "controls": [
+      {
+        "label": "Trang trước",
+        "left": 817,
+        "right": 877
+      },
+      {
+        "label": "Trang sau",
+        "left": 1305,
+        "right": 1365
+      }
+    ]
+  },
+  "width1536": {
+    "viewport": 1536,
+    "scrollWidth": 1528,
+    "contentWidth": 1250,
+    "gridWidth": 1202,
+    "headingFirstLineRects": [
+      {
+        "left": 163,
+        "right": 804.453125,
+        "top": 286.25
+      }
+    ],
+    "headingColumnRight": 844.15625,
+    "controls": [
+      {
+        "label": "Trang trước",
+        "left": 865,
+        "right": 925
+      },
+      {
+        "label": "Trang sau",
+        "left": 1353,
+        "right": 1413
+      }
+    ]
+  },
+  "width1920": {
+    "viewport": 1920,
+    "scrollWidth": 1912,
+    "contentWidth": 1250,
+    "gridWidth": 1202,
+    "headingFirstLineRects": [
+      {
+        "left": 355,
+        "right": 996.453125,
+        "top": 286.25
+      }
+    ],
+    "headingColumnRight": 1036.15625,
+    "controls": [
+      {
+        "label": "Trang trước",
+        "left": 1057,
+        "right": 1117
+      },
+      {
+        "label": "Trang sau",
+        "left": 1545,
+        "right": 1605
+      }
+    ]
+  }
+}

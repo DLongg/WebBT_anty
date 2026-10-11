@@ -1,0 +1,334 @@
+{
+  "desktop": {
+    "title": "BT DECOM | Xây lắp chuyên nghiệp - Phát triển bền vững",
+    "url": "http://localhost:3000/",
+    "zoom": "0.9",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pageHeight": 9230,
+    "sections": [
+      {
+        "heading": "Chúng tôi sống\nvì thử thách",
+        "top": 0,
+        "height": 900
+      },
+      {
+        "heading": "Công ty TNHH Xây lắp và Phát triển Thương mại BT",
+        "top": 900,
+        "height": 869
+      },
+      {
+        "heading": "Giá Trị Cốt Lõi",
+        "top": 1769,
+        "height": 654
+      },
+      {
+        "heading": "Dịch Vụ Nổi Bật",
+        "top": 2423,
+        "height": 957
+      },
+      {
+        "heading": "Sự khác biệt mang tên BT DECOM",
+        "top": 3380,
+        "height": 823
+      },
+      {
+        "top": 4203,
+        "height": 451
+      },
+      {
+        "heading": "Quy Trình Làm Việc",
+        "top": 4654,
+        "height": 682
+      },
+      {
+        "heading": "Dự Án Tiêu Biểu",
+        "top": 5336,
+        "height": 1306
+      },
+      {
+        "heading": "Tin Tức & Sự Kiện",
+        "top": 6642,
+        "height": 850
+      },
+      {
+        "heading": "Khách Hàng Nói Gì",
+        "top": 7492,
+        "height": 723
+      },
+      {
+        "heading": "KHÁCH HÀNG & ĐỐI TÁC CHIẾN LƯỢC TIÊU BIỂU",
+        "top": 8215,
+        "height": 222
+      },
+      {
+        "heading": "Bạn cần đơn vị thi công\nxây lắp chuyên nghiệp?",
+        "top": 8437,
+        "height": 349
+      }
+    ],
+    "images": [],
+    "h1": "Chúng tôi sống\nvì thử thách",
+    "paragraphs": [
+      {
+        "text": "Tại BT DECOM, chúng tôi hợp tác với khách hàng để hiện thực hóa tham vọng của họ, thực hiện các dự án tạo ra sự khác biệt lâu dài và có ý nghĩa đối với con người và cộng đồng.",
+        "font": "20px"
+      },
+      {
+        "text": "BT DECOM., LTD được thành lập từ năm 2012. Trải qua nhiều năm hình thành và phát triển, chúng tôi đã từng bước khẳng định vị thế và uy tín, trở thành đối tác tin cậy của nhiều khách hàng trên cả nước.",
+        "font": "17px"
+      },
+      {
+        "text": "Với phương châm lấy chất lượng, uy tín và sự hài lòng của khách hàng làm nền tảng, BT DECOM không ngừng nâng cao năng lực để mang đến những công trình bền vững, an toàn và có giá trị lâu dài.",
+        "font": "17px"
+      },
+      {
+        "text": "Nền tảng vững chắc để xây dựng mọi công trình đạt chuẩn",
+        "font": "18px"
+      },
+      {
+        "text": "Đặt an toàn lao động và an toàn điện lên hàng đầu trong mọi công trình thi công.",
+        "font": "16px"
+      },
+      {
+        "text": "Cam kết chất lượng công trình đạt chuẩn kỹ thuật, đảm bảo vận hành ổn định lâu dài.",
+        "font": "16px"
+      }
+    ],
+    "tel": [
+      {
+        "text": "0936 189 292",
+        "href": "tel:0936189292"
+      },
+      {
+        "text": "Hoặc gọi trực tiếp",
+        "href": "tel:+84XXXXXXXXX"
+      }
+    ]
+  },
+  "mobile": {
+    "title": "BT DECOM | Xây lắp chuyên nghiệp - Phát triển bền vững",
+    "url": "http://localhost:3000/",
+    "zoom": "0.9",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageHeight": 11924,
+    "sections": [
+      {
+        "heading": "Chúng tôi sống\nvì thử thách",
+        "top": 0,
+        "height": 844
+      },
+      {
+        "heading": "Công ty TNHH Xây lắp và Phát triển Thương mại BT",
+        "top": 844,
+        "height": 870
+      },
+      {
+        "heading": "Giá Trị Cốt Lõi",
+        "top": 1714,
+        "height": 659
+      },
+      {
+        "heading": "Dịch Vụ Nổi Bật",
+        "top": 2373,
+        "height": 1183
+      },
+      {
+        "heading": "Sự khác biệt mang tên BT DECOM",
+        "top": 3556,
+        "height": 1107
+      },
+      {
+        "top": 4663,
+        "height": 401
+      },
+      {
+        "heading": "Quy Trình Làm Việc",
+        "top": 5064,
+        "height": 1018
+      },
+      {
+        "heading": "Dự Án Tiêu Biểu",
+        "top": 6082,
+        "height": 2969
+      },
+      {
+        "heading": "Tin Tức & Sự Kiện",
+        "top": 9051,
+        "height": 744
+      },
+      {
+        "heading": "Khách Hàng Nói Gì",
+        "top": 9795,
+        "height": 541
+      },
+      {
+        "heading": "KHÁCH HÀNG & ĐỐI TÁC CHIẾN LƯỢC TIÊU BIỂU",
+        "top": 10336,
+        "height": 212
+      },
+      {
+        "heading": "Bạn cần đơn vị thi công xây lắp chuyên nghiệp?",
+        "top": 10548,
+        "height": 270
+      }
+    ],
+    "images": [],
+    "h1": "Chúng tôi sống\nvì thử thách",
+    "paragraphs": [
+      {
+        "text": "Tại BT DECOM, chúng tôi hợp tác với khách hàng để hiện thực hóa tham vọng của họ, thực hiện các dự án tạo ra sự khác biệt lâu dài và có ý nghĩa đối với con người và cộng đồng.",
+        "font": "14px"
+      },
+      {
+        "text": "BT DECOM., LTD được thành lập từ năm 2012. Trải qua nhiều năm hình thành và phát triển, chúng tôi đã từng bước khẳng định vị thế và uy tín, trở thành đối tác tin cậy của nhiều khách hàng trên cả nước.",
+        "font": "14px"
+      },
+      {
+        "text": "Với phương châm lấy chất lượng, uy tín và sự hài lòng của khách hàng làm nền tảng, BT DECOM không ngừng nâng cao năng lực để mang đến những công trình bền vững, an toàn và có giá trị lâu dài.",
+        "font": "14px"
+      },
+      {
+        "text": "Nền tảng vững chắc để xây dựng mọi công trình đạt chuẩn",
+        "font": "14px"
+      },
+      {
+        "text": "Đặt an toàn lao động và an toàn điện lên hàng đầu trong mọi công trình thi công.",
+        "font": "12px"
+      },
+      {
+        "text": "Cam kết chất lượng công trình đạt chuẩn kỹ thuật, đảm bảo vận hành ổn định lâu dài.",
+        "font": "12px"
+      }
+    ],
+    "tel": [
+      {
+        "text": "0936 189 292",
+        "href": "tel:0936189292"
+      },
+      {
+        "text": "Hoặc gọi trực tiếp",
+        "href": "tel:+84XXXXXXXXX"
+      }
+    ]
+  },
+  "tablet": {
+    "title": "BT DECOM | Xây lắp chuyên nghiệp - Phát triển bền vững",
+    "url": "http://localhost:3000/",
+    "zoom": "0.9",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "pageHeight": 11796,
+    "sections": [
+      {
+        "heading": "Chúng tôi sống\nvì thử thách",
+        "top": 0,
+        "height": 1024
+      },
+      {
+        "heading": "Công ty TNHH Xây lắp và Phát triển Thương mại BT",
+        "top": 1024,
+        "height": 1508
+      },
+      {
+        "heading": "Giá Trị Cốt Lõi",
+        "top": 2532,
+        "height": 879
+      },
+      {
+        "heading": "Dịch Vụ Nổi Bật",
+        "top": 3411,
+        "height": 991
+      },
+      {
+        "heading": "Sự khác biệt mang tên BT DECOM",
+        "top": 4401,
+        "height": 1221
+      },
+      {
+        "top": 5623,
+        "height": 593
+      },
+      {
+        "heading": "Quy Trình Làm Việc",
+        "top": 6215,
+        "height": 681
+      },
+      {
+        "heading": "Dự Án Tiêu Biểu",
+        "top": 6897,
+        "height": 1638
+      },
+      {
+        "heading": "Tin Tức & Sự Kiện",
+        "top": 8535,
+        "height": 1241
+      },
+      {
+        "heading": "Khách Hàng Nói Gì",
+        "top": 9776,
+        "height": 755
+      },
+      {
+        "heading": "KHÁCH HÀNG & ĐỐI TÁC CHIẾN LƯỢC TIÊU BIỂU",
+        "top": 10531,
+        "height": 222
+      },
+      {
+        "heading": "Bạn cần đơn vị thi công\nxây lắp chuyên nghiệp?",
+        "top": 10754,
+        "height": 322
+      }
+    ],
+    "images": [],
+    "h1": "Chúng tôi sống\nvì thử thách",
+    "paragraphs": [
+      {
+        "text": "Tại BT DECOM, chúng tôi hợp tác với khách hàng để hiện thực hóa tham vọng của họ, thực hiện các dự án tạo ra sự khác biệt lâu dài và có ý nghĩa đối với con người và cộng đồng.",
+        "font": "20px"
+      },
+      {
+        "text": "BT DECOM., LTD được thành lập từ năm 2012. Trải qua nhiều năm hình thành và phát triển, chúng tôi đã từng bước khẳng định vị thế và uy tín, trở thành đối tác tin cậy của nhiều khách hàng trên cả nước.",
+        "font": "17px"
+      },
+      {
+        "text": "Với phương châm lấy chất lượng, uy tín và sự hài lòng của khách hàng làm nền tảng, BT DECOM không ngừng nâng cao năng lực để mang đến những công trình bền vững, an toàn và có giá trị lâu dài.",
+        "font": "17px"
+      },
+      {
+        "text": "Nền tảng vững chắc để xây dựng mọi công trình đạt chuẩn",
+        "font": "18px"
+      },
+      {
+        "text": "Đặt an toàn lao động và an toàn điện lên hàng đầu trong mọi công trình thi công.",
+        "font": "16px"
+      },
+      {
+        "text": "Cam kết chất lượng công trình đạt chuẩn kỹ thuật, đảm bảo vận hành ổn định lâu dài.",
+        "font": "16px"
+      }
+    ],
+    "tel": [
+      {
+        "text": "0936 189 292",
+        "href": "tel:0936189292"
+      },
+      {
+        "text": "Hoặc gọi trực tiếp",
+        "href": "tel:+84XXXXXXXXX"
+      }
+    ]
+  },
+  "live": {
+    "url": "chrome-error://chromewebdata/",
+    "title": "btdecom.vn",
+    "text": "This site can’t be reached\n\nCheck if there is a typo in btdecom.vn.\n\nIf spelling is correct, try running Windows Network Diagnostics.\nDNS_PROBE_FINISHED_NXDOMAIN\nReload"
+  }
+}

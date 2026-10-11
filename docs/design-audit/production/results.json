@@ -1,0 +1,642 @@
+{
+  "phase": "production",
+  "staticMode": true,
+  "checks": [
+    {
+      "name": "Montserrat headings 360",
+      "pass": true
+    },
+    {
+      "name": "Inter body 360",
+      "pass": true
+    },
+    {
+      "name": "No horizontal overflow 360",
+      "pass": true
+    },
+    {
+      "name": "No dead links 360",
+      "pass": true
+    },
+    {
+      "name": "No broken local images 360",
+      "pass": true
+    },
+    {
+      "name": "Original hero video 360",
+      "pass": true
+    },
+    {
+      "name": "Original hero heading 360",
+      "pass": true
+    },
+    {
+      "name": "Original mobile hero CTA visible 360",
+      "pass": true
+    },
+    {
+      "name": "Montserrat headings 390",
+      "pass": true
+    },
+    {
+      "name": "Inter body 390",
+      "pass": true
+    },
+    {
+      "name": "All homepage images loaded 390",
+      "pass": true
+    },
+    {
+      "name": "No horizontal overflow 390",
+      "pass": true
+    },
+    {
+      "name": "No dead links 390",
+      "pass": true
+    },
+    {
+      "name": "No broken local images 390",
+      "pass": true
+    },
+    {
+      "name": "Original hero video 390",
+      "pass": true
+    },
+    {
+      "name": "Original hero heading 390",
+      "pass": true
+    },
+    {
+      "name": "Original mobile hero CTA visible 390",
+      "pass": true
+    },
+    {
+      "name": "Montserrat headings 768",
+      "pass": true
+    },
+    {
+      "name": "Inter body 768",
+      "pass": true
+    },
+    {
+      "name": "No horizontal overflow 768",
+      "pass": true
+    },
+    {
+      "name": "No dead links 768",
+      "pass": true
+    },
+    {
+      "name": "No broken local images 768",
+      "pass": true
+    },
+    {
+      "name": "Original hero video 768",
+      "pass": true
+    },
+    {
+      "name": "Original hero heading 768",
+      "pass": true
+    },
+    {
+      "name": "Original mobile hero CTA visible 768",
+      "pass": true
+    },
+    {
+      "name": "Montserrat headings 1024",
+      "pass": true
+    },
+    {
+      "name": "Inter body 1024",
+      "pass": true
+    },
+    {
+      "name": "No horizontal overflow 1024",
+      "pass": true
+    },
+    {
+      "name": "No dead links 1024",
+      "pass": true
+    },
+    {
+      "name": "No broken local images 1024",
+      "pass": true
+    },
+    {
+      "name": "Original hero video 1024",
+      "pass": true
+    },
+    {
+      "name": "Original hero heading 1024",
+      "pass": true
+    },
+    {
+      "name": "Montserrat headings 1440",
+      "pass": true
+    },
+    {
+      "name": "Inter body 1440",
+      "pass": true
+    },
+    {
+      "name": "All homepage images loaded 1440",
+      "pass": true
+    },
+    {
+      "name": "No horizontal overflow 1440",
+      "pass": true
+    },
+    {
+      "name": "No dead links 1440",
+      "pass": true
+    },
+    {
+      "name": "No broken local images 1440",
+      "pass": true
+    },
+    {
+      "name": "Original hero video 1440",
+      "pass": true
+    },
+    {
+      "name": "Original hero heading 1440",
+      "pass": true
+    },
+    {
+      "name": "Original hero slider advances",
+      "pass": true
+    },
+    {
+      "name": "Desktop slider controls fit viewport",
+      "pass": true
+    },
+    {
+      "name": "Header becomes white on scroll",
+      "pass": true
+    },
+    {
+      "name": "Menu focuses first link",
+      "pass": true
+    },
+    {
+      "name": "Menu traps forward Tab",
+      "pass": true
+    },
+    {
+      "name": "Escape closes menu and restores focus",
+      "pass": true
+    },
+    {
+      "name": "Skip link focuses content after navigation",
+      "pass": true
+    },
+    {
+      "name": "Skip link bypasses header links",
+      "pass": true
+    },
+    {
+      "name": "Enlarged text fits mobile",
+      "pass": true
+    },
+    {
+      "name": "Reduced motion disables smooth scrolling",
+      "pass": true
+    },
+    {
+      "name": "Route /about",
+      "pass": true
+    },
+    {
+      "name": "Route fits mobile /about",
+      "pass": true
+    },
+    {
+      "name": "Route /services",
+      "pass": true
+    },
+    {
+      "name": "Route fits mobile /services",
+      "pass": true
+    },
+    {
+      "name": "Route /projects",
+      "pass": true
+    },
+    {
+      "name": "Route fits mobile /projects",
+      "pass": true
+    },
+    {
+      "name": "Route /news",
+      "pass": true
+    },
+    {
+      "name": "Route fits mobile /news",
+      "pass": true
+    },
+    {
+      "name": "Route /contact",
+      "pass": true
+    },
+    {
+      "name": "Route fits mobile /contact",
+      "pass": true
+    },
+    {
+      "name": "Route /services/thi-cong-xay-lap-dien",
+      "pass": true
+    },
+    {
+      "name": "Route fits mobile /services/thi-cong-xay-lap-dien",
+      "pass": true
+    },
+    {
+      "name": "Route /projects/thi-cong-xay-lap-hang-muc-chieu-sang-1",
+      "pass": true
+    },
+    {
+      "name": "Route fits mobile /projects/thi-cong-xay-lap-hang-muc-chieu-sang-1",
+      "pass": true
+    },
+    {
+      "name": "Route /news/bt-decom-trien-khai-giai-doan-moi-du-an-khu-phuc-hop-ha-noi",
+      "pass": true
+    },
+    {
+      "name": "Route fits mobile /news/bt-decom-trien-khai-giai-doan-moi-du-an-khu-phuc-hop-ha-noi",
+      "pass": true
+    },
+    {
+      "name": "Contact no form",
+      "pass": true
+    },
+    {
+      "name": "Link /",
+      "pass": true
+    },
+    {
+      "name": "Link /about",
+      "pass": true
+    },
+    {
+      "name": "Link /services",
+      "pass": true
+    },
+    {
+      "name": "Link /projects",
+      "pass": true
+    },
+    {
+      "name": "Link /news",
+      "pass": true
+    },
+    {
+      "name": "Link /contact",
+      "pass": true
+    },
+    {
+      "name": "Link /projects/thi-cong-xay-lap-hang-muc-chieu-sang-1",
+      "pass": true
+    },
+    {
+      "name": "Link /services/thi-cong-xay-lap-dien",
+      "pass": true
+    },
+    {
+      "name": "Link /services/co-dien-va-tien-ich",
+      "pass": true
+    },
+    {
+      "name": "Link /services/xay-dung-va-ha-tang",
+      "pass": true
+    },
+    {
+      "name": "Link /services/tu-van-thiet-ke-giam-sat",
+      "pass": true
+    },
+    {
+      "name": "Link /projects/cap-ngam-24kv-thanh-pho-giao-luu",
+      "pass": true
+    },
+    {
+      "name": "Link /projects/cap-thoat-nuoc-truong-koala-house",
+      "pass": true
+    },
+    {
+      "name": "Link /news/bt-decom-trien-khai-giai-doan-moi-du-an-khu-phuc-hop-ha-noi",
+      "pass": true
+    },
+    {
+      "name": "Link /news/giai-phap-thi-cong-mep-toi-uu-cho-cong-trinh-dan-dung-va-cong-nghiep",
+      "pass": true
+    },
+    {
+      "name": "Link /news/bt-decom-dong-hanh-cung-muc-tieu-phat-trien-cong-trinh-xanh-tai-viet-nam",
+      "pass": true
+    },
+    {
+      "name": "Link /news?category=Tuyển dụng",
+      "pass": true
+    },
+    {
+      "name": "No runtime exceptions",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "width360": {
+    "width": 360,
+    "height": 844,
+    "pageHeight": 7347,
+    "scrollWidth": 352,
+    "heading": "Chúng tôi sống\nvì thử thách",
+    "sections": [
+      {
+        "heading": "Chúng tôi sống\nvì thử thách",
+        "top": 0,
+        "height": 844
+      },
+      {
+        "top": 844,
+        "height": 241
+      },
+      {
+        "heading": "Lĩnh vực hoạt động",
+        "top": 1085,
+        "height": 1147
+      },
+      {
+        "heading": "Công trình tiêu biểu",
+        "top": 2232,
+        "height": 1650
+      },
+      {
+        "heading": "Năng lực triển khai từng hạng mục",
+        "top": 3882,
+        "height": 1151
+      },
+      {
+        "heading": "Tin Tức & Sự Kiện",
+        "top": 5034,
+        "height": 826
+      },
+      {
+        "heading": "KHÁCH HÀNG & ĐỐI TÁC CHIẾN LƯỢC TIÊU BIỂU",
+        "top": 5860,
+        "height": 235
+      },
+      {
+        "heading": "Bạn cần đơn vị thi công xây lắp chuyên nghiệp?",
+        "top": 6095,
+        "height": 300
+      }
+    ],
+    "video": 1,
+    "videoSource": "/videos/hero_bgr.mp4",
+    "videoPlaying": true,
+    "deadLinks": 0,
+    "brokenImages": [],
+    "performance": {
+      "lcpMs": 1920,
+      "domContentLoadedMs": 79.89999999850988,
+      "resourceBytes": 7188959,
+      "videoRequests": []
+    }
+  },
+  "width390": {
+    "width": 390,
+    "height": 844,
+    "pageHeight": 7259,
+    "scrollWidth": 382,
+    "heading": "Chúng tôi sống\nvì thử thách",
+    "sections": [
+      {
+        "heading": "Chúng tôi sống\nvì thử thách",
+        "top": 0,
+        "height": 844
+      },
+      {
+        "top": 844,
+        "height": 241
+      },
+      {
+        "heading": "Lĩnh vực hoạt động",
+        "top": 1085,
+        "height": 1121
+      },
+      {
+        "heading": "Công trình tiêu biểu",
+        "top": 2206,
+        "height": 1682
+      },
+      {
+        "heading": "Năng lực triển khai từng hạng mục",
+        "top": 3888,
+        "height": 1079
+      },
+      {
+        "heading": "Tin Tức & Sự Kiện",
+        "top": 4968,
+        "height": 826
+      },
+      {
+        "heading": "KHÁCH HÀNG & ĐỐI TÁC CHIẾN LƯỢC TIÊU BIỂU",
+        "top": 5794,
+        "height": 235
+      },
+      {
+        "heading": "Bạn cần đơn vị thi công xây lắp chuyên nghiệp?",
+        "top": 6029,
+        "height": 300
+      }
+    ],
+    "video": 1,
+    "videoSource": "/videos/hero_bgr.mp4",
+    "videoPlaying": true,
+    "deadLinks": 0,
+    "brokenImages": [],
+    "performance": {
+      "lcpMs": 1380,
+      "domContentLoadedMs": 75.60000000149012,
+      "resourceBytes": 7163028,
+      "videoRequests": []
+    }
+  },
+  "width768": {
+    "width": 768,
+    "height": 844,
+    "pageHeight": 7214,
+    "scrollWidth": 760,
+    "heading": "Chúng tôi sống\nvì thử thách",
+    "sections": [
+      {
+        "heading": "Chúng tôi sống\nvì thử thách",
+        "top": 0,
+        "height": 844
+      },
+      {
+        "top": 844,
+        "height": 245
+      },
+      {
+        "heading": "Lĩnh vực hoạt động",
+        "top": 1089,
+        "height": 733
+      },
+      {
+        "heading": "Công trình tiêu biểu",
+        "top": 1822,
+        "height": 1604
+      },
+      {
+        "heading": "Năng lực triển khai từng hạng mục",
+        "top": 3426,
+        "height": 1312
+      },
+      {
+        "heading": "Tin Tức & Sự Kiện",
+        "top": 4737,
+        "height": 1375
+      },
+      {
+        "heading": "KHÁCH HÀNG & ĐỐI TÁC CHIẾN LƯỢC TIÊU BIỂU",
+        "top": 6112,
+        "height": 247
+      },
+      {
+        "heading": "Bạn cần đơn vị thi công\nxây lắp chuyên nghiệp?",
+        "top": 6359,
+        "height": 358
+      }
+    ],
+    "video": 1,
+    "videoSource": "/videos/hero_bgr.mp4",
+    "videoPlaying": true,
+    "deadLinks": 0,
+    "brokenImages": [],
+    "performance": {
+      "lcpMs": 2660,
+      "domContentLoadedMs": 1339,
+      "resourceBytes": 7355772,
+      "videoRequests": []
+    }
+  },
+  "width1024": {
+    "width": 1024,
+    "height": 844,
+    "pageHeight": 5471,
+    "scrollWidth": 1016,
+    "heading": "Chúng tôi sống\nvì thử thách",
+    "sections": [
+      {
+        "heading": "Chúng tôi sống\nvì thử thách",
+        "top": 0,
+        "height": 844
+      },
+      {
+        "top": 844,
+        "height": 149
+      },
+      {
+        "heading": "Lĩnh vực hoạt động",
+        "top": 993,
+        "height": 735
+      },
+      {
+        "heading": "Công trình tiêu biểu",
+        "top": 1728,
+        "height": 940
+      },
+      {
+        "heading": "Năng lực triển khai từng hạng mục",
+        "top": 2669,
+        "height": 766
+      },
+      {
+        "heading": "Tin Tức & Sự Kiện",
+        "top": 3434,
+        "height": 929
+      },
+      {
+        "heading": "KHÁCH HÀNG & ĐỐI TÁC CHIẾN LƯỢC TIÊU BIỂU",
+        "top": 4363,
+        "height": 247
+      },
+      {
+        "heading": "Bạn cần đơn vị thi công\nxây lắp chuyên nghiệp?",
+        "top": 4610,
+        "height": 388
+      }
+    ],
+    "video": 1,
+    "videoSource": "/videos/hero_bgr.mp4",
+    "videoPlaying": true,
+    "deadLinks": 0,
+    "brokenImages": [],
+    "performance": {
+      "lcpMs": 620,
+      "domContentLoadedMs": 195.19999999925494,
+      "resourceBytes": 12371327,
+      "videoRequests": []
+    }
+  },
+  "width1440": {
+    "width": 1440,
+    "height": 900,
+    "pageHeight": 5760,
+    "scrollWidth": 1432,
+    "heading": "Chúng tôi sống\nvì thử thách",
+    "sections": [
+      {
+        "heading": "Chúng tôi sống\nvì thử thách",
+        "top": 0,
+        "height": 900
+      },
+      {
+        "top": 900,
+        "height": 149
+      },
+      {
+        "heading": "Lĩnh vực hoạt động",
+        "top": 1049,
+        "height": 723
+      },
+      {
+        "heading": "Công trình tiêu biểu",
+        "top": 1772,
+        "height": 1092
+      },
+      {
+        "heading": "Năng lực triển khai từng hạng mục",
+        "top": 2864,
+        "height": 844
+      },
+      {
+        "heading": "Tin Tức & Sự Kiện",
+        "top": 3708,
+        "height": 944
+      },
+      {
+        "heading": "KHÁCH HÀNG & ĐỐI TÁC CHIẾN LƯỢC TIÊU BIỂU",
+        "top": 4652,
+        "height": 247
+      },
+      {
+        "heading": "Bạn cần đơn vị thi công\nxây lắp chuyên nghiệp?",
+        "top": 4899,
+        "height": 388
+      }
+    ],
+    "video": 1,
+    "videoSource": "/videos/hero_bgr.mp4",
+    "videoPlaying": true,
+    "deadLinks": 0,
+    "brokenImages": [],
+    "performance": {
+      "lcpMs": 536,
+      "domContentLoadedMs": 75,
+      "resourceBytes": 12371327,
+      "videoRequests": []
+    }
+  }
+}
